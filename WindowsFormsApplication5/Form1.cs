@@ -22,7 +22,7 @@ namespace WindowsFormsApplication5
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            //fucmkkk
         }
 
         private void panel2_Paint(object sender, PaintEventArgs e)
