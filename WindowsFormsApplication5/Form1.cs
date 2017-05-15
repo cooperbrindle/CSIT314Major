@@ -15,14 +15,16 @@ namespace WindowsFormsApplication5
     public partial class Form1 : Form
     {
         Thread th;
+        Database db;
         public Form1()
         {
             InitializeComponent();
+            db = new Database();
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            //fucmkkk
+
         }
 
         private void panel2_Paint(object sender, PaintEventArgs e)
@@ -32,24 +34,19 @@ namespace WindowsFormsApplication5
 
         private void button2_Click(object sender, EventArgs e)
         {
-            SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Dan\Documents\Data.mdf;Integrated Security=True;Connect Timeout=30");
-            SqlDataAdapter sda = new SqlDataAdapter("Select Count(*) From STAFF where USERNAME = '" + textBox2.Text + "' and PASSWORD = '" + textBox1 .Text + "' and FPRIVILEGE = 1", con);
-            DataTable dt = new DataTable();
-            sda.Fill(dt);
-            SqlDataAdapter sda2 = new SqlDataAdapter("Select Count(*) From STAFF where USERNAME = '" + textBox2.Text + "' and PASSWORD = '" + textBox1.Text + "' and FPRIVILEGE = 0", con);
-            DataTable dt2 = new DataTable();
-            sda2.Fill(dt2);
-            if (dt.Rows[0][0].ToString() == "1")
+            String queryStr = "SELECT username, privilege FROM Employee WHERE username = '" + textBox2.Text + "' and password = '" + textBox1.Text + "'";
+            DataTable dt = db.query(queryStr);
+            
+            if(dt.Rows.Count > 0)
             {
+                
+                if (dt.Rows[0][1].ToString() == "1")
+                    th = new Thread(openFullPrivilegeForm);
+
+                else if (dt.Rows[0][1].ToString() == "1")
+                    th = new Thread(openNonFullPrivilegeForm);
+
                 this.Close();
-                th = new Thread(openFullPrivilegeForm);
-                th.SetApartmentState(ApartmentState.STA);
-                th.Start();
-            }
-            else if (dt2.Rows[0][0].ToString() == "1")
-            {
-                this.Close();
-                th = new Thread(openNonFullPrivilegeForm);
                 th.SetApartmentState(ApartmentState.STA);
                 th.Start();
             }
