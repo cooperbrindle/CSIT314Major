@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApplication5
 {
-    public partial class PolicyForm : UserControl
+    public partial class PolicyControl : UserControl
     {
-        public PolicyForm()
+        public PolicyControl()
         {
             InitializeComponent();
         }

@@ -12,11 +12,11 @@ using System.Data.SqlClient;
 
 namespace WindowsFormsApplication5
 {
-    public partial class Form1 : Form
+    public partial class LoginForm : Form
     {
         Thread th;
         Database db;
-        public Form1()
+        public LoginForm()
         {
             InitializeComponent();
             db = new Database();
@@ -58,11 +58,11 @@ namespace WindowsFormsApplication5
 
         private void openFullPrivilegeForm(object obj)
         {
-            Application.Run(new main());
+            Application.Run(new CeoDash());
         }
         private void openNonFullPrivilegeForm(object obj)
         {
-            Application.Run(new main2());
+            Application.Run(new EmployeeDash());
         }
     }
 }

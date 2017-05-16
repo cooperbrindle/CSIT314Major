@@ -1,6 +1,6 @@
 ﻿namespace WindowsFormsApplication5
 {
-    partial class PolicyForm
+    partial class PolicyControl
     {
         /// <summary> 
         /// Required designer variable.

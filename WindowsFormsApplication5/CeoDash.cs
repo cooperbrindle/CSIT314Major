@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApplication5
 {
-    public partial class CEO : @base
+    public partial class CeoDash : @base
     {
-        public CEO()
+        public CeoDash()
         {
             InitializeComponent();
         }
@@ -27,6 +27,21 @@ namespace WindowsFormsApplication5
         private void flowLayoutPanel2_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            PolicyControl policyForm = new PolicyControl();
+            policyForm.Location = new Point { X = 165, Y = 35 };
+            mainPanel.Hide();
+            policyForm.Disposed += new EventHandler(PanelDisposed);
+            this.Controls.Add(policyForm);
+            policyForm.Show();
+        }
+
+        public void PanelDisposed(object sender, EventArgs e)
+        {
+            mainPanel.Show();
         }
     }
 }

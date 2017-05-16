@@ -58,6 +58,7 @@ CREATE TABLE PolicyProject (
 	projectManagerID VARCHAR(80),
 	policyID INT,
 	projectID INT,
+	weighting INT,
 	PRIMARY KEY (policyProjectID),
 	FOREIGN KEY (departmentHeadID) REFERENCES Employee(employeeID),
 	FOREIGN KEY (ProjectManagerID) REFERENCES Employee(employeeID),
