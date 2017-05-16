@@ -14,7 +14,7 @@ namespace WindowsFormsApplication5
     {
         public main()
         {
-            InitializeComponent(); 
+            InitializeComponent();
         }
 
         private void CreatePolicy_Click(object sender, EventArgs e)
