@@ -56,10 +56,12 @@ CREATE TABLE PolicyProject (
 	progress INT,
 	departmentHeadID VARCHAR(80),
 	projectManagerID VARCHAR(80),
+	policyID INT,
 	projectID INT,
 	PRIMARY KEY (policyProjectID),
 	FOREIGN KEY (departmentHeadID) REFERENCES Employee(employeeID),
 	FOREIGN KEY (ProjectManagerID) REFERENCES Employee(employeeID),
+	FOREIGN KEY (policyID) REFERENCES Policy(policyID),
 	FOREIGN KEY (projectID) REFERENCES Project
 );
 
