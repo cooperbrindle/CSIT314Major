@@ -16,7 +16,7 @@ namespace WindowsFormsApplication5
 
         public Database()
         {
-            connection = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Anthony\Documents\Project.mdf;Integrated Security=True;Connect Timeout=30");
+            connection = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Dan\Documents\Data.mdf;Integrated Security=True;Connect Timeout=30");
             table = new DataTable();
         }
 

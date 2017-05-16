@@ -23,7 +23,8 @@ namespace WindowsFormsApplication5
             {
                 Database db = new Database();
                 DataTable table = db.query("SELECT Count(*) FROM Policy");
-                int id = table.Rows.Count + 1;
+
+                int id = Convert.ToInt32(table.Rows[0][0].ToString()) + 1;
                 table = db.query("INSERT INTO Policy VALUES ('" + polNameTxt.Text + "', '" + polDescTxt.Text + "', " + Convert.ToString(id) + ")");
                 this.Dispose();
             }
