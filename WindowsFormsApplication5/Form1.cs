@@ -43,7 +43,7 @@ namespace WindowsFormsApplication5
                 if (dt.Rows[0][1].ToString() == "1")
                     th = new Thread(openFullPrivilegeForm);
 
-                else if (dt.Rows[0][1].ToString() == "1")
+                else if (dt.Rows[0][1].ToString() == "2")
                     th = new Thread(openNonFullPrivilegeForm);
 
                 this.Close();
