@@ -16,5 +16,21 @@ namespace WindowsFormsApplication5
         {
             InitializeComponent();
         }
+
+        private void CreatePolicy_Click(object sender, EventArgs e)
+        {
+            PolicyForm policyForm = new PolicyForm();
+            policyForm.Location = new Point { X = 165, Y = 35 };
+            mainPanel.Hide();
+            policyForm.Disposed += new EventHandler(PanelDisposed);
+            this.Controls.Add(policyForm);
+            policyForm.Show();
+
+        }
+
+        public void PanelDisposed(object sender, EventArgs e)
+        {
+            mainPanel.Show();
+        }
     }
 }
