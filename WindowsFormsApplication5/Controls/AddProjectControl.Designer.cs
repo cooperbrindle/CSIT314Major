@@ -31,13 +31,13 @@
             this.ProjectListView = new System.Windows.Forms.ListBox();
             this.createProjectBtn = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.addProjectBtn = new System.Windows.Forms.Button();
-            this.startDateLbl = new System.Windows.Forms.Label();
-            this.ProjManLbl = new System.Windows.Forms.Label();
-            this.estEndLbl = new System.Windows.Forms.Label();
-            this.datePickStart = new System.Windows.Forms.DateTimePicker();
-            this.datePickEnd = new System.Windows.Forms.DateTimePicker();
             this.ProjManList = new System.Windows.Forms.ComboBox();
+            this.datePickEnd = new System.Windows.Forms.DateTimePicker();
+            this.datePickStart = new System.Windows.Forms.DateTimePicker();
+            this.estEndLbl = new System.Windows.Forms.Label();
+            this.ProjManLbl = new System.Windows.Forms.Label();
+            this.startDateLbl = new System.Windows.Forms.Label();
+            this.addProjectBtn = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -57,6 +57,7 @@
             this.createProjectBtn.TabIndex = 1;
             this.createProjectBtn.Text = "Create Project";
             this.createProjectBtn.UseVisualStyleBackColor = true;
+            this.createProjectBtn.Click += new System.EventHandler(this.createProjectBtn_Click);
             // 
             // panel1
             // 
@@ -72,32 +73,27 @@
             this.panel1.Size = new System.Drawing.Size(302, 314);
             this.panel1.TabIndex = 2;
             // 
-            // addProjectBtn
+            // ProjManList
             // 
-            this.addProjectBtn.Location = new System.Drawing.Point(179, 281);
-            this.addProjectBtn.Name = "addProjectBtn";
-            this.addProjectBtn.Size = new System.Drawing.Size(120, 30);
-            this.addProjectBtn.TabIndex = 2;
-            this.addProjectBtn.Text = "Add Project";
-            this.addProjectBtn.UseVisualStyleBackColor = true;
+            this.ProjManList.FormattingEnabled = true;
+            this.ProjManList.Location = new System.Drawing.Point(99, 129);
+            this.ProjManList.Name = "ProjManList";
+            this.ProjManList.Size = new System.Drawing.Size(121, 21);
+            this.ProjManList.TabIndex = 15;
             // 
-            // startDateLbl
+            // datePickEnd
             // 
-            this.startDateLbl.AutoSize = true;
-            this.startDateLbl.Location = new System.Drawing.Point(13, 51);
-            this.startDateLbl.Name = "startDateLbl";
-            this.startDateLbl.Size = new System.Drawing.Size(55, 13);
-            this.startDateLbl.TabIndex = 8;
-            this.startDateLbl.Text = "Start Date";
+            this.datePickEnd.Location = new System.Drawing.Point(99, 86);
+            this.datePickEnd.Name = "datePickEnd";
+            this.datePickEnd.Size = new System.Drawing.Size(200, 20);
+            this.datePickEnd.TabIndex = 14;
             // 
-            // ProjManLbl
+            // datePickStart
             // 
-            this.ProjManLbl.AutoSize = true;
-            this.ProjManLbl.Location = new System.Drawing.Point(13, 138);
-            this.ProjManLbl.Name = "ProjManLbl";
-            this.ProjManLbl.Size = new System.Drawing.Size(85, 13);
-            this.ProjManLbl.TabIndex = 11;
-            this.ProjManLbl.Text = "Project Manager";
+            this.datePickStart.Location = new System.Drawing.Point(99, 44);
+            this.datePickStart.Name = "datePickStart";
+            this.datePickStart.Size = new System.Drawing.Size(200, 20);
+            this.datePickStart.TabIndex = 13;
             // 
             // estEndLbl
             // 
@@ -108,27 +104,32 @@
             this.estEndLbl.TabIndex = 12;
             this.estEndLbl.Text = "Est. End Date";
             // 
-            // datePickStart
+            // ProjManLbl
             // 
-            this.datePickStart.Location = new System.Drawing.Point(99, 44);
-            this.datePickStart.Name = "datePickStart";
-            this.datePickStart.Size = new System.Drawing.Size(200, 20);
-            this.datePickStart.TabIndex = 13;
+            this.ProjManLbl.AutoSize = true;
+            this.ProjManLbl.Location = new System.Drawing.Point(13, 138);
+            this.ProjManLbl.Name = "ProjManLbl";
+            this.ProjManLbl.Size = new System.Drawing.Size(85, 13);
+            this.ProjManLbl.TabIndex = 11;
+            this.ProjManLbl.Text = "Project Manager";
             // 
-            // datePickEnd
+            // startDateLbl
             // 
-            this.datePickEnd.Location = new System.Drawing.Point(99, 86);
-            this.datePickEnd.Name = "datePickEnd";
-            this.datePickEnd.Size = new System.Drawing.Size(200, 20);
-            this.datePickEnd.TabIndex = 14;
+            this.startDateLbl.AutoSize = true;
+            this.startDateLbl.Location = new System.Drawing.Point(13, 51);
+            this.startDateLbl.Name = "startDateLbl";
+            this.startDateLbl.Size = new System.Drawing.Size(55, 13);
+            this.startDateLbl.TabIndex = 8;
+            this.startDateLbl.Text = "Start Date";
             // 
-            // ProjManList
+            // addProjectBtn
             // 
-            this.ProjManList.FormattingEnabled = true;
-            this.ProjManList.Location = new System.Drawing.Point(99, 129);
-            this.ProjManList.Name = "ProjManList";
-            this.ProjManList.Size = new System.Drawing.Size(121, 21);
-            this.ProjManList.TabIndex = 15;
+            this.addProjectBtn.Location = new System.Drawing.Point(179, 281);
+            this.addProjectBtn.Name = "addProjectBtn";
+            this.addProjectBtn.Size = new System.Drawing.Size(120, 30);
+            this.addProjectBtn.TabIndex = 2;
+            this.addProjectBtn.Text = "Add Project";
+            this.addProjectBtn.UseVisualStyleBackColor = true;
             // 
             // AddProjectControl
             // 

@@ -24,14 +24,22 @@ namespace WindowsFormsApplication5
 
         private void AddProjectControl_Load(object sender, EventArgs e)
         {
+            load();            
+        }
+
+        public void load()
+        {
             String queryStr = "SELECT projectID, name FROM Project";
             table = db.query(queryStr);
 
+            ProjectListView.Items.Clear();
+            ProjManList.Items.Clear();
+
             LinkedList<Project> projectList = new LinkedList<Project>();
-            if(table.Rows.Count >= 1)
+            if (table.Rows.Count >= 1)
             {
                 Project p;
-                foreach(DataRow r in table.Rows)
+                foreach (DataRow r in table.Rows)
                 {
                     p = new Project();
                     p.projectID = Convert.ToInt32(r[0].ToString());
@@ -44,10 +52,10 @@ namespace WindowsFormsApplication5
             queryStr = "SELECT employeeID, name FROM Employee WHERE privilege = 3";
             table = db.query(queryStr);
 
-            if(table.Rows.Count >= 1)
+            if (table.Rows.Count >= 1)
             {
                 Employee man;
-                foreach(DataRow r in table.Rows)
+                foreach (DataRow r in table.Rows)
                 {
                     man = new Employee();
                     man.employeeID = r[0].ToString();
@@ -55,7 +63,6 @@ namespace WindowsFormsApplication5
                     ProjManList.Items.Add(man);
                 }
             }
-            
         }
 
         public void itemSelected(Object sender, EventArgs e)
@@ -63,6 +70,29 @@ namespace WindowsFormsApplication5
             if (ProjectListView.SelectedIndex >= 0)
                 panel1.Show();
             else panel1.Hide();
+        }
+
+        private void createProjectBtn_Click(object sender, EventArgs e)
+        {
+            CreateProjectControl projControl = new CreateProjectControl();
+            //projControl.Location = this.Location;
+            //projControl.Size = this.Size;
+            projControl.Disposed += new EventHandler(createControlDisposed);
+            foreach (Control c in this.Controls)
+                c.Hide();
+            this.Controls.Add(projControl);
+            projControl.Show();
+            projControl.BringToFront();
+            //this.Hide();
+        }
+
+        public void createControlDisposed(Object sender, EventArgs e)
+        {
+            foreach (Control c in this.Controls)
+                c.Show();
+            panel1.Hide();
+            load();
+            //this.Show();
         }
     }
 

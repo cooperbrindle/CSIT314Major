@@ -108,6 +108,9 @@
     <EmbeddedResource Include="CeoDash.resx">
       <DependentUpon>CeoDash.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Controls\CreateProjectControl.resx">
+      <DependentUpon>CreateProjectControl.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </EmbeddedResource>

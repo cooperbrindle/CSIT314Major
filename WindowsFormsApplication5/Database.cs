@@ -26,6 +26,6 @@ namespace WindowsFormsApplication5
             SqlDataAdapter sda = new SqlDataAdapter(queryString, connection);
             sda.Fill(table);
             return table;
-        }
+        } 
     }
 }
