@@ -62,7 +62,7 @@ namespace WindowsFormsApplication5
         }
         private void openNonFullPrivilegeForm(object obj)
         {
-            Application.Run(new main2());
+            Application.Run(new Dep_head());
         }
     }
 }
