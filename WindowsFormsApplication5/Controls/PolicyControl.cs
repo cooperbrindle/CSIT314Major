@@ -29,5 +29,10 @@ namespace WindowsFormsApplication5
                 this.Dispose();
             }
         }
+
+        private void DescrLbl_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
