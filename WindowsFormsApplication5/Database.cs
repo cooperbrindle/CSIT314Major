@@ -22,7 +22,7 @@ namespace WindowsFormsApplication5
 
         public DataTable query(String queryString)
         {
-            
+            table = new DataTable();
             SqlDataAdapter sda = new SqlDataAdapter(queryString, connection);
             sda.Fill(table);
             return table;

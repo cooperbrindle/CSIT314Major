@@ -39,7 +39,22 @@ namespace WindowsFormsApplication5
                     projectList.AddLast(p);
                     ProjectListView.Items.Add(p);
                 }
-            }   
+            }
+
+            queryStr = "SELECT employeeID, name FROM Employee WHERE privilege = 3";
+            table = db.query(queryStr);
+
+            if(table.Rows.Count >= 1)
+            {
+                Employee man;
+                foreach(DataRow r in table.Rows)
+                {
+                    man = new Employee();
+                    man.employeeID = r[0].ToString();
+                    man.name = r[1].ToString();
+                    ProjManList.Items.Add(man);
+                }
+            }
             
         }
 
