@@ -87,7 +87,7 @@
             this.Create.UseVisualStyleBackColor = true;
             this.Create.Click += new System.EventHandler(this.Create_Click);
             // 
-            // PolicyForm
+            // PolicyControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -97,8 +97,8 @@
             this.Controls.Add(this.polNameTxt);
             this.Controls.Add(this.DescrLbl);
             this.Controls.Add(this.NameLbl);
-            this.Name = "PolicyForm";
-            this.Size = new System.Drawing.Size(329, 209);
+            this.Name = "PolicyControl";
+            this.Size = new System.Drawing.Size(562, 316);
             this.ResumeLayout(false);
             this.PerformLayout();
 

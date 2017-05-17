@@ -148,7 +148,7 @@
             this.Controls.Add(this.nameTxt);
             this.Controls.Add(this.label1);
             this.Name = "CreateProjectControl";
-            this.Size = new System.Drawing.Size(380, 312);
+            this.Size = new System.Drawing.Size(562, 316);
             ((System.ComponentModel.ISupportInitialize)(this.budgetInput)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

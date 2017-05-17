@@ -30,7 +30,14 @@ namespace WindowsFormsApplication5
         {
             AddProjectControl projectControl = new AddProjectControl();
             projectControl.Location = new Point() { X = 236,  Y = 80 };
+            mainPanel.Hide();
+            projectControl.Disposed += new EventHandler(PanelDisposed);
             this.Controls.Add(projectControl);
+            projectControl.Show();
+        }
+        public void PanelDisposed(object sender, EventArgs e)
+        {
+            mainPanel.Show();
         }
     }
 }

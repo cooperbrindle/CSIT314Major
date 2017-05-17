@@ -44,14 +44,14 @@
             // ProjectListView
             // 
             this.ProjectListView.FormattingEnabled = true;
-            this.ProjectListView.Location = new System.Drawing.Point(41, 35);
+            this.ProjectListView.Location = new System.Drawing.Point(22, 0);
             this.ProjectListView.Name = "ProjectListView";
             this.ProjectListView.Size = new System.Drawing.Size(120, 277);
             this.ProjectListView.TabIndex = 0;
             // 
             // createProjectBtn
             // 
-            this.createProjectBtn.Location = new System.Drawing.Point(41, 319);
+            this.createProjectBtn.Location = new System.Drawing.Point(22, 283);
             this.createProjectBtn.Name = "createProjectBtn";
             this.createProjectBtn.Size = new System.Drawing.Size(120, 30);
             this.createProjectBtn.TabIndex = 1;
@@ -68,9 +68,9 @@
             this.panel1.Controls.Add(this.ProjManLbl);
             this.panel1.Controls.Add(this.startDateLbl);
             this.panel1.Controls.Add(this.addProjectBtn);
-            this.panel1.Location = new System.Drawing.Point(257, 35);
+            this.panel1.Location = new System.Drawing.Point(224, 3);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(302, 314);
+            this.panel1.Size = new System.Drawing.Size(302, 310);
             this.panel1.TabIndex = 2;
             // 
             // ProjManList
@@ -124,7 +124,7 @@
             // 
             // addProjectBtn
             // 
-            this.addProjectBtn.Location = new System.Drawing.Point(179, 281);
+            this.addProjectBtn.Location = new System.Drawing.Point(179, 277);
             this.addProjectBtn.Name = "addProjectBtn";
             this.addProjectBtn.Size = new System.Drawing.Size(120, 30);
             this.addProjectBtn.TabIndex = 2;
@@ -139,7 +139,7 @@
             this.Controls.Add(this.createProjectBtn);
             this.Controls.Add(this.ProjectListView);
             this.Name = "AddProjectControl";
-            this.Size = new System.Drawing.Size(572, 395);
+            this.Size = new System.Drawing.Size(562, 316);
             this.Load += new System.EventHandler(this.AddProjectControl_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
