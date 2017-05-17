@@ -103,10 +103,10 @@
             this.ClientSize = new System.Drawing.Size(810, 424);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.LogoutBtn);
-            this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.dateTimePicker1);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.pictureBox2);
+            this.Controls.Add(this.pictureBox1);
             this.Name = "@base";
             this.Text = "Intergrated Managerment Dashboard";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();

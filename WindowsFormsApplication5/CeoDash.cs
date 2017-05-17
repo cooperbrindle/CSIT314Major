@@ -19,6 +19,10 @@ namespace WindowsFormsApplication5
 
         private void CEO_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'projectDataSet.Project' table. You can move, or remove it, as needed.
+            this.projectTableAdapter.Fill(this.projectDataSet.Project);
+            // TODO: This line of code loads data into the 'projectDataSet.PolicyProject' table. You can move, or remove it, as needed.
+            this.policyProjectTableAdapter1.Fill(this.projectDataSet.PolicyProject);
             // TODO: This line of code loads data into the 'policyProject._PolicyProject' table. You can move, or remove it, as needed.
             this.policyProjectTableAdapter.Fill(this.policyProject._PolicyProject);
 
@@ -32,7 +36,7 @@ namespace WindowsFormsApplication5
         private void button2_Click(object sender, EventArgs e)
         {
             PolicyControl policyForm = new PolicyControl();
-            policyForm.Location = new Point { X = 165, Y = 35 };
+            policyForm.Location = new Point { X = 236, Y = 80 };
             mainPanel.Hide();
             policyForm.Disposed += new EventHandler(PanelDisposed);
             this.Controls.Add(policyForm);
@@ -42,6 +46,11 @@ namespace WindowsFormsApplication5
         public void PanelDisposed(object sender, EventArgs e)
         {
             mainPanel.Show();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
