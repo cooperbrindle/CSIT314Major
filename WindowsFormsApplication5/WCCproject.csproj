@@ -90,6 +90,7 @@
     <Compile Include="Controls\PolicyControl.Designer.cs">
       <DependentUpon>PolicyControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="Models\Project.cs" />
     <Compile Include="PolicyProject.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
