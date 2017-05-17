@@ -24,7 +24,9 @@ namespace WindowsFormsApplication5
 
         private void button2_Click(object sender, EventArgs e)
         {
-
+            AddProjectControl projectControl = new AddProjectControl();
+            projectControl.Location = new Point() { X = 175, Y = 35 };
+            this.Controls.Add(projectControl);
         }
     }
 }

@@ -45,7 +45,7 @@ namespace WindowsFormsApplication5
 
         public void itemSelected(Object sender, EventArgs e)
         {
-            if (ProjectListView.SelectedIndex > 0)
+            if (ProjectListView.SelectedIndex >= 0)
                 panel1.Show();
             else panel1.Hide();
         }

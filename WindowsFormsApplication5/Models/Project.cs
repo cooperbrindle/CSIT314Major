@@ -15,5 +15,11 @@ namespace WindowsFormsApplication5
         public double budget { get; set; }
         public String stakeholder { get; set; }
         public String department { get; set; }
+
+        override public String ToString()
+        {
+            return name;
+        }
     }
+
 }
