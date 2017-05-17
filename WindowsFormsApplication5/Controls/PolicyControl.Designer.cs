@@ -97,6 +97,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.Controls.Add(this.Create);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.polDescTxt);
@@ -104,7 +105,7 @@
             this.Controls.Add(this.DescrLbl);
             this.Controls.Add(this.NameLbl);
             this.Name = "PolicyControl";
-            this.Size = new System.Drawing.Size(562, 316);
+            this.Size = new System.Drawing.Size(558, 312);
             this.ResumeLayout(false);
             this.PerformLayout();
 
