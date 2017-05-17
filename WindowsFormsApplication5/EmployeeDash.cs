@@ -10,14 +10,19 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApplication5
 {
-    public partial class main2 : Form
+    public partial class EmployeeDash : @base
     {
-        public main2()
+        public EmployeeDash()
         {
             InitializeComponent();
         }
 
         private void main2_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
         {
 
         }

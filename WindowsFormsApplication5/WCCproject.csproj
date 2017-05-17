@@ -47,63 +47,48 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controls\AddProjectControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\AddProjectControl.Designer.cs">
+      <DependentUpon>AddProjectControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="base.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="base.Designer.cs">
       <DependentUpon>base.cs</DependentUpon>
     </Compile>
-    <Compile Include="CEO.cs">
+    <Compile Include="CeoDash.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="CEO.Designer.cs">
-      <DependentUpon>CEO.cs</DependentUpon>
+    <Compile Include="CeoDash.Designer.cs">
+      <DependentUpon>CeoDash.cs</DependentUpon>
     </Compile>
-    <Compile Include="Ceo_chart.cs">
+    <Compile Include="Controls\CreateProjectControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Ceo_chart.Designer.cs">
-      <DependentUpon>Ceo_chart.cs</DependentUpon>
+    <Compile Include="Controls\CreateProjectControl.Designer.cs">
+      <DependentUpon>CreateProjectControl.cs</DependentUpon>
     </Compile>
     <Compile Include="Database.cs" />
-    <Compile Include="Dep_head.cs">
+    <Compile Include="LoginForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Dep_head.Designer.cs">
-      <DependentUpon>Dep_head.cs</DependentUpon>
+    <Compile Include="LoginForm.Designer.cs">
+      <DependentUpon>LoginForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form1.cs">
+    <Compile Include="EmployeeDash.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="EmployeeDash.Designer.cs">
+      <DependentUpon>EmployeeDash.cs</DependentUpon>
     </Compile>
-    <Compile Include="Proj_Man.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Proj_Man.Designer.cs">
-      <DependentUpon>Proj_Man.cs</DependentUpon>
-    </Compile>
-    <Compile Include="main2.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="main2.Designer.cs">
-      <DependentUpon>main2.cs</DependentUpon>
-    </Compile>
-    <Compile Include="main.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="main.Designer.cs">
-      <DependentUpon>main.cs</DependentUpon>
-    </Compile>
-    <Compile Include="PolicyForm.cs">
+    <Compile Include="Controls\PolicyControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="PolicyForm.Designer.cs">
-      <DependentUpon>PolicyForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="PolicyProject.cs">
-      <DependentUpon>PolicyProject.xsd</DependentUpon>
+    <Compile Include="Controls\PolicyControl.Designer.cs">
+      <DependentUpon>PolicyControl.cs</DependentUpon>
     </Compile>
     <Compile Include="PolicyProject.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -111,38 +96,24 @@
       <DependentUpon>PolicyProject.xsd</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
-    <Compile Include="ProjectDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>ProjectDataSet.xsd</DependentUpon>
-    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Controls\AddProjectControl.resx">
+      <DependentUpon>AddProjectControl.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="base.resx">
       <DependentUpon>base.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="CEO.resx">
-      <DependentUpon>CEO.cs</DependentUpon>
+    <EmbeddedResource Include="CeoDash.resx">
+      <DependentUpon>CeoDash.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Ceo_chart.resx">
-      <DependentUpon>Ceo_chart.cs</DependentUpon>
+    <EmbeddedResource Include="LoginForm.resx">
+      <DependentUpon>LoginForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Dep_head.resx">
-      <DependentUpon>Dep_head.cs</DependentUpon>
+    <EmbeddedResource Include="EmployeeDash.resx">
+      <DependentUpon>EmployeeDash.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Proj_Man.resx">
-      <DependentUpon>Proj_Man.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="main.resx">
-      <DependentUpon>main.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="main2.resx">
-      <DependentUpon>main2.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="PolicyForm.resx">
-      <DependentUpon>PolicyForm.cs</DependentUpon>
+    <EmbeddedResource Include="Controls\PolicyControl.resx">
+      <DependentUpon>PolicyControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -165,17 +136,6 @@
     <None Include="PolicyProject.xss">
       <DependentUpon>PolicyProject.xsd</DependentUpon>
     </None>
-    <None Include="ProjectDataSet.xsc">
-      <DependentUpon>ProjectDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="ProjectDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>ProjectDataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="ProjectDataSet.xss">
-      <DependentUpon>ProjectDataSet.xsd</DependentUpon>
-    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -192,6 +152,7 @@
   <ItemGroup>
     <None Include="Resources\Wollongong-Sunrise-4.jpg" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
