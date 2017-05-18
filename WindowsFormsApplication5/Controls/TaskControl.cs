@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApplication5.Controls
 {
-    public partial class NewTaskControl : UserControl
+    public partial class TaskControl : UserControl
     {
-        public NewTaskControl()
+        public TaskControl()
         {
             InitializeComponent();
         }

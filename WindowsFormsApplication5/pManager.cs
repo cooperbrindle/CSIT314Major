@@ -26,7 +26,16 @@ namespace WindowsFormsApplication5
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            Controls.TaskControl task = new Controls.TaskControl();
+            task.Location = new Point { X = 236, Y = 80 };
+            mainPanel.Hide();
+            task.Disposed += new EventHandler(PanelDisposed);
+            this.Controls.Add(task);
+            task.Show();
+        }
+        public void PanelDisposed(object sender, EventArgs e)
+        {
+            mainPanel.Show();
         }
     }
 }

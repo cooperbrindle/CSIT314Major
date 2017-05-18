@@ -1,6 +1,6 @@
 ﻿namespace WindowsFormsApplication5.Controls
 {
-    partial class NewTaskControl
+    partial class TaskControl
     {
         /// <summary> 
         /// Required designer variable.
@@ -34,8 +34,8 @@
             this.taskTxt = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.cstLbl = new System.Windows.Forms.Label();
             this.cstInput = new System.Windows.Forms.NumericUpDown();
+            this.cstLbl = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.timeInput = new System.Windows.Forms.NumericUpDown();
             this.timeLbl = new System.Windows.Forms.Label();
@@ -51,6 +51,7 @@
             this.panel7 = new System.Windows.Forms.Panel();
             this.happyInput = new System.Windows.Forms.NumericUpDown();
             this.happyLbl = new System.Windows.Forms.Label();
+            this.createBtn = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cstInput)).BeginInit();
@@ -80,7 +81,7 @@
             // 
             this.Proj_Name.AutoSize = true;
             this.Proj_Name.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
-            this.Proj_Name.Location = new System.Drawing.Point(26, 33);
+            this.Proj_Name.Location = new System.Drawing.Point(16, 34);
             this.Proj_Name.Name = "Proj_Name";
             this.Proj_Name.Size = new System.Drawing.Size(123, 20);
             this.Proj_Name.TabIndex = 1;
@@ -108,7 +109,7 @@
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel1.Controls.Add(this.taskLbl);
             this.panel1.Controls.Add(this.taskTxt);
-            this.panel1.Location = new System.Drawing.Point(30, 70);
+            this.panel1.Location = new System.Drawing.Point(20, 71);
             this.panel1.Name = "panel1";
             this.panel1.Padding = new System.Windows.Forms.Padding(6, 10, 0, 0);
             this.panel1.Size = new System.Drawing.Size(525, 63);
@@ -119,11 +120,28 @@
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel2.Controls.Add(this.cstInput);
             this.panel2.Controls.Add(this.cstLbl);
-            this.panel2.Location = new System.Drawing.Point(30, 139);
+            this.panel2.Location = new System.Drawing.Point(20, 140);
             this.panel2.Name = "panel2";
             this.panel2.Padding = new System.Windows.Forms.Padding(6, 10, 0, 0);
             this.panel2.Size = new System.Drawing.Size(263, 43);
             this.panel2.TabIndex = 5;
+            // 
+            // cstInput
+            // 
+            this.cstInput.Increment = new decimal(new int[] {
+            100,
+            0,
+            0,
+            0});
+            this.cstInput.Location = new System.Drawing.Point(103, 10);
+            this.cstInput.Maximum = new decimal(new int[] {
+            10000,
+            0,
+            0,
+            0});
+            this.cstInput.Name = "cstInput";
+            this.cstInput.Size = new System.Drawing.Size(120, 20);
+            this.cstInput.TabIndex = 3;
             // 
             // cstLbl
             // 
@@ -136,19 +154,12 @@
             this.cstLbl.TabIndex = 2;
             this.cstLbl.Text = "Cost";
             // 
-            // cstInput
-            // 
-            this.cstInput.Location = new System.Drawing.Point(103, 10);
-            this.cstInput.Name = "cstInput";
-            this.cstInput.Size = new System.Drawing.Size(120, 20);
-            this.cstInput.TabIndex = 3;
-            // 
             // panel3
             // 
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel3.Controls.Add(this.timeInput);
             this.panel3.Controls.Add(this.timeLbl);
-            this.panel3.Location = new System.Drawing.Point(30, 188);
+            this.panel3.Location = new System.Drawing.Point(20, 189);
             this.panel3.Name = "panel3";
             this.panel3.Padding = new System.Windows.Forms.Padding(6, 10, 0, 0);
             this.panel3.Size = new System.Drawing.Size(263, 43);
@@ -177,7 +188,7 @@
             this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel4.Controls.Add(this.wtInput);
             this.panel4.Controls.Add(this.wtLbl);
-            this.panel4.Location = new System.Drawing.Point(30, 237);
+            this.panel4.Location = new System.Drawing.Point(20, 238);
             this.panel4.Name = "panel4";
             this.panel4.Padding = new System.Windows.Forms.Padding(6, 10, 0, 0);
             this.panel4.Size = new System.Drawing.Size(263, 43);
@@ -206,7 +217,7 @@
             this.panel5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel5.Controls.Add(this.wrkrInput);
             this.panel5.Controls.Add(this.wrkrLbl);
-            this.panel5.Location = new System.Drawing.Point(299, 139);
+            this.panel5.Location = new System.Drawing.Point(289, 140);
             this.panel5.Name = "panel5";
             this.panel5.Padding = new System.Windows.Forms.Padding(6, 10, 0, 0);
             this.panel5.Size = new System.Drawing.Size(256, 43);
@@ -235,7 +246,7 @@
             this.panel6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel6.Controls.Add(this.ecoInput);
             this.panel6.Controls.Add(this.ecoLbl);
-            this.panel6.Location = new System.Drawing.Point(299, 188);
+            this.panel6.Location = new System.Drawing.Point(289, 189);
             this.panel6.Name = "panel6";
             this.panel6.Padding = new System.Windows.Forms.Padding(6, 10, 0, 0);
             this.panel6.Size = new System.Drawing.Size(256, 43);
@@ -264,7 +275,7 @@
             this.panel7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel7.Controls.Add(this.happyInput);
             this.panel7.Controls.Add(this.happyLbl);
-            this.panel7.Location = new System.Drawing.Point(299, 237);
+            this.panel7.Location = new System.Drawing.Point(289, 238);
             this.panel7.Name = "panel7";
             this.panel7.Padding = new System.Windows.Forms.Padding(6, 10, 0, 0);
             this.panel7.Size = new System.Drawing.Size(256, 43);
@@ -288,11 +299,21 @@
             this.happyLbl.TabIndex = 2;
             this.happyLbl.Text = "Happiness";
             // 
-            // NewTaskControl
+            // createBtn
+            // 
+            this.createBtn.Location = new System.Drawing.Point(447, 286);
+            this.createBtn.Name = "createBtn";
+            this.createBtn.Size = new System.Drawing.Size(75, 23);
+            this.createBtn.TabIndex = 7;
+            this.createBtn.Text = "Create";
+            this.createBtn.UseVisualStyleBackColor = true;
+            // 
+            // TaskControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.Controls.Add(this.createBtn);
             this.Controls.Add(this.panel7);
             this.Controls.Add(this.panel6);
             this.Controls.Add(this.panel5);
@@ -302,7 +323,7 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.Proj_Name);
             this.Controls.Add(this.titleLbl);
-            this.Name = "NewTaskControl";
+            this.Name = "TaskControl";
             this.Size = new System.Drawing.Size(558, 312);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -354,5 +375,6 @@
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.NumericUpDown happyInput;
         private System.Windows.Forms.Label happyLbl;
+        private System.Windows.Forms.Button createBtn;
     }
 }
