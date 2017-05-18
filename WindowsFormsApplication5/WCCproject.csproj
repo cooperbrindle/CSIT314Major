@@ -71,6 +71,12 @@
     <Compile Include="Controls\CreateProjectControl.Designer.cs">
       <DependentUpon>CreateProjectControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="Controls\NewTaskControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\NewTaskControl.Designer.cs">
+      <DependentUpon>NewTaskControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="Database.cs" />
     <Compile Include="LoginForm.cs">
       <SubType>Form</SubType>
@@ -104,6 +110,9 @@
       <DependentUpon>PolicyProject.xsd</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
+    <Compile Include="ProjectDataSet1.cs">
+      <DependentUpon>ProjectDataSet1.xsd</DependentUpon>
+    </Compile>
     <Compile Include="ProjectDataSet1.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -121,6 +130,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Controls\CreateProjectControl.resx">
       <DependentUpon>CreateProjectControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\NewTaskControl.resx">
+      <DependentUpon>NewTaskControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>

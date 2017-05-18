@@ -64,6 +64,7 @@
             // 
             // panel1
             // 
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel1.Controls.Add(this.ProjManList);
             this.panel1.Controls.Add(this.datePickEnd);
             this.panel1.Controls.Add(this.datePickStart);

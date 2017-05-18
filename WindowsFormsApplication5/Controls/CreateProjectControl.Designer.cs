@@ -234,12 +234,12 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.createBtn);
             this.Name = "CreateProjectControl";
-            this.Size = new System.Drawing.Size(558, 312);
+            this.Size = new System.Drawing.Size(560, 314);
             ((System.ComponentModel.ISupportInitialize)(this.budgetInput)).EndInit();
             this.flowLayoutPanel1.ResumeLayout(false);
             this.flowLayoutPanel1.PerformLayout();
