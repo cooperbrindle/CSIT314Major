@@ -39,12 +39,14 @@ namespace WindowsFormsApplication5
             
             if(dt.Rows.Count > 0)
             {
-                
+
                 if (dt.Rows[0][1].ToString() == "1")
-                    th = new Thread(openFullPrivilegeForm);
+                    th = new Thread(openCeoForm);
 
                 else if (dt.Rows[0][1].ToString() == "2")
-                    th = new Thread(openNonFullPrivilegeForm);
+                    th = new Thread(openDeptForm);
+                else if (dt.Rows[0][1].ToString() == "3")
+                    th = new Thread(openManForm);
 
                 this.Close();
                 th.SetApartmentState(ApartmentState.STA);
@@ -56,11 +58,15 @@ namespace WindowsFormsApplication5
             }
         }
 
-        private void openFullPrivilegeForm(object obj)
+        private void openCeoForm(object obj)
         {
             Application.Run(new CeoDash());
         }
-        private void openNonFullPrivilegeForm(object obj)
+        private void openDeptForm(object obj)
+        {
+            Application.Run(new EmployeeDash());
+        }
+        private void openManForm(object obj)
         {
             Application.Run(new pManager());
         }
