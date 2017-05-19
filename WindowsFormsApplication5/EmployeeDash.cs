@@ -29,7 +29,7 @@ namespace WindowsFormsApplication5
         }
         public void WriteTextBoxTextToLabel(string txt)
         {
-            label2.Text = txt;
+            //label2.Text = txt;
         }
 
         public EmployeeDash(int id) : this() { employeeID = id; }

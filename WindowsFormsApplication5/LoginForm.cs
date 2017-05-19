@@ -37,7 +37,6 @@ namespace WindowsFormsApplication5
         private void button2_Click(object sender, EventArgs e)
         {
             name = textBox2.Text;
-            String queryStr = "SELECT username, privilege FROM Employee WHERE username = '" + textBox2.Text + "' and password = '" + textBox1.Text + "'";
             String queryStr = "SELECT username, privilege, employeeID FROM Employee WHERE username = '" + textBox2.Text + "' and password = '" + textBox1.Text + "'";
             DataTable dt = db.query(queryStr);
             
