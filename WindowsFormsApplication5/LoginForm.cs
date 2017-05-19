@@ -16,6 +16,7 @@ namespace WindowsFormsApplication5
     {
         Thread th;
         Database db;
+        int id;
         public LoginForm()
         {
             InitializeComponent();
@@ -34,12 +35,12 @@ namespace WindowsFormsApplication5
 
         private void button2_Click(object sender, EventArgs e)
         {
-            String queryStr = "SELECT username, privilege FROM Employee WHERE username = '" + textBox2.Text + "' and password = '" + textBox1.Text + "'";
+            String queryStr = "SELECT username, privilege, employeeID FROM Employee WHERE username = '" + textBox2.Text + "' and password = '" + textBox1.Text + "'";
             DataTable dt = db.query(queryStr);
             
             if(dt.Rows.Count > 0)
             {
-
+                id = Convert.ToInt32(dt.Rows[0][2].ToString());
                 if (dt.Rows[0][1].ToString() == "1")
                     th = new Thread(openCeoForm);
 
@@ -48,6 +49,7 @@ namespace WindowsFormsApplication5
                 else if (dt.Rows[0][1].ToString() == "3")
                     th = new Thread(openManForm);
 
+                
                 this.Close();
                 th.SetApartmentState(ApartmentState.STA);
                 th.Start();
@@ -60,15 +62,15 @@ namespace WindowsFormsApplication5
 
         private void openCeoForm(object obj)
         {
-            Application.Run(new CeoDash());
+            Application.Run(new CeoDash(id));
         }
         private void openDeptForm(object obj)
         {
-            Application.Run(new EmployeeDash());
+            Application.Run(new EmployeeDash(id));
         }
         private void openManForm(object obj)
         {
-            Application.Run(new pManager());
+            Application.Run(new pManager(id));
         }
     }
 }

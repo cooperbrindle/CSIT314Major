@@ -12,10 +12,34 @@ namespace WindowsFormsApplication5
 {
     public partial class pManager : @base
     {
+        int employeeID;
         public pManager()
         {
             InitializeComponent();
+            Database db = new Database();
+            DataTable table = db.query("SELECT * FROM PolicyProject WHERE projectManagerID = "+employeeID);
+            foreach (DataRow r in table.Rows)
+            {
+                PolicyProjectModel p = new PolicyProjectModel
+                {
+                    policyProjectID = r[0].ToString(),
+                    startDate = r[1].ToString(),
+                    estEndDate = r[2].ToString(),
+                    endDate = r[3].ToString(),
+                    finalCost = Convert.ToInt32(r[4].ToString()),
+                    progress = Convert.ToInt32(r[5].ToString()),
+                    departmentHeadID = r[6].ToString(),
+                    projectManagerID = r[7].ToString(),
+                    policyID = Convert.ToInt32(r[8].ToString()),
+                    projectID = Convert.ToInt32(r[9].ToString()),
+                    weighting = Convert.ToInt32(r[10].ToString())
+                };
+                projectBox.Items.Add(p);
+            }
+            //projectBox.SelectedIndex = 0;
         }
+
+        public pManager(int id) : this() { employeeID = id; }
 
         private void pManager_Load(object sender, EventArgs e)
         {

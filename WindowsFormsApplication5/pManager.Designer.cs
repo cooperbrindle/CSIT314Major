@@ -47,6 +47,7 @@
             this.processBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.projectDataSet = new WindowsFormsApplication5.ProjectDataSet();
             this.processTableAdapter = new WindowsFormsApplication5.ProjectDataSetTableAdapters.ProcessTableAdapter();
+            this.projectBox = new System.Windows.Forms.ComboBox();
             this.flowLayoutPanel1.SuspendLayout();
             this.mainPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chart2)).BeginInit();
@@ -181,11 +182,20 @@
             // 
             this.processTableAdapter.ClearBeforeFill = true;
             // 
+            // projectBox
+            // 
+            this.projectBox.FormattingEnabled = true;
+            this.projectBox.Location = new System.Drawing.Point(13, 13);
+            this.projectBox.Name = "projectBox";
+            this.projectBox.Size = new System.Drawing.Size(162, 21);
+            this.projectBox.TabIndex = 8;
+            // 
             // pManager
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(810, 424);
+            this.Controls.Add(this.projectBox);
             this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.mainPanel);
             this.Name = "pManager";
@@ -193,6 +203,7 @@
             this.Load += new System.EventHandler(this.pManager_Load);
             this.Controls.SetChildIndex(this.mainPanel, 0);
             this.Controls.SetChildIndex(this.flowLayoutPanel1, 0);
+            this.Controls.SetChildIndex(this.projectBox, 0);
             this.flowLayoutPanel1.ResumeLayout(false);
             this.mainPanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.chart2)).EndInit();
@@ -217,5 +228,6 @@
         private System.Windows.Forms.BindingSource processBindingSource;
         private ProjectDataSetTableAdapters.ProcessTableAdapter processTableAdapter;
         private System.Windows.Forms.DataVisualization.Charting.Chart chart2;
+        private System.Windows.Forms.ComboBox projectBox;
     }
 }

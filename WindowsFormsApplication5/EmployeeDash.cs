@@ -12,6 +12,7 @@ namespace WindowsFormsApplication5
 {
     public partial class EmployeeDash : @base
     {
+        int employeeID;
         public EmployeeDash()
         {
             InitializeComponent();
@@ -26,6 +27,8 @@ namespace WindowsFormsApplication5
                 policyBox.Items.Add(p);
             }
         }
+
+        public EmployeeDash(int id) : this() { employeeID = id; }
 
         private void main2_Load(object sender, EventArgs e)
         {

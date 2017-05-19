@@ -12,10 +12,13 @@ namespace WindowsFormsApplication5
 {
     public partial class CeoDash : @base
     {
+        int employeeID;
         public CeoDash()
         {
             InitializeComponent();
         }
+
+        public CeoDash(int id) : this() { employeeID = id; }
 
         private void CEO_Load(object sender, EventArgs e)
         {
