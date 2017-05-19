@@ -14,6 +14,7 @@ namespace WindowsFormsApplication5
 {
     public partial class LoginForm : Form
     {
+        string name;
         Thread th;
         Database db;
         int id;
@@ -35,6 +36,8 @@ namespace WindowsFormsApplication5
 
         private void button2_Click(object sender, EventArgs e)
         {
+            name = textBox2.Text;
+            String queryStr = "SELECT username, privilege FROM Employee WHERE username = '" + textBox2.Text + "' and password = '" + textBox1.Text + "'";
             String queryStr = "SELECT username, privilege, employeeID FROM Employee WHERE username = '" + textBox2.Text + "' and password = '" + textBox1.Text + "'";
             DataTable dt = db.query(queryStr);
             
@@ -62,14 +65,22 @@ namespace WindowsFormsApplication5
 
         private void openCeoForm(object obj)
         {
+            CeoDash CeoDash = new CeoDash();
+            CeoDash.WriteTextBoxTextToLabel(name);
             Application.Run(new CeoDash(id));
         }
         private void openDeptForm(object obj)
         {
+            EmployeeDash EmployeeDash = new EmployeeDash();
+            EmployeeDash.WriteTextBoxTextToLabel(name);
+            //Application.Run(EmployeeDash);
             Application.Run(new EmployeeDash(id));
         }
         private void openManForm(object obj)
         {
+            pManager pManager = new pManager();
+            pManager.WriteTextBoxTextToLabel(name);
+            //Application.Run(pManager);
             Application.Run(new pManager(id));
         }
     }
