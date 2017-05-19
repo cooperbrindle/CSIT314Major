@@ -69,8 +69,12 @@ CREATE TABLE PolicyProject (
 CREATE TABLE Process(
 	processID INT,
 	instructions VARCHAR(255),
-	milestones VARCHAR(80),
+	timeFrame INT,
 	cost INT,
+	workers INT,
+	ecoImpact INT,
+	happiness INT,
+	weighting INT,
 	policyProjectID VARCHAR(80),
 	PRIMARY KEY (processID),
 	FOREIGN KEY (policyProjectID) REFERENCES PolicyProject
