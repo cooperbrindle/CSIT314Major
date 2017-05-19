@@ -14,6 +14,7 @@ namespace WindowsFormsApplication5
 {
     public partial class LoginForm : Form
     {
+        string name;
         Thread th;
         Database db;
         public LoginForm()
@@ -34,17 +35,20 @@ namespace WindowsFormsApplication5
 
         private void button2_Click(object sender, EventArgs e)
         {
+            name = textBox2.Text;
             String queryStr = "SELECT username, privilege FROM Employee WHERE username = '" + textBox2.Text + "' and password = '" + textBox1.Text + "'";
             DataTable dt = db.query(queryStr);
             
             if(dt.Rows.Count > 0)
             {
-                
+
                 if (dt.Rows[0][1].ToString() == "1")
-                    th = new Thread(openFullPrivilegeForm);
+                    th = new Thread(openCeoForm);
 
                 else if (dt.Rows[0][1].ToString() == "2")
-                    th = new Thread(openNonFullPrivilegeForm);
+                    th = new Thread(openDeptForm);
+                else if (dt.Rows[0][1].ToString() == "3")
+                    th = new Thread(openManForm);
 
                 this.Close();
                 th.SetApartmentState(ApartmentState.STA);
@@ -56,13 +60,23 @@ namespace WindowsFormsApplication5
             }
         }
 
-        private void openFullPrivilegeForm(object obj)
+        private void openCeoForm(object obj)
         {
-            Application.Run(new CeoDash());
+            CeoDash CeoDash = new CeoDash();
+            CeoDash.WriteTextBoxTextToLabel(name);
+            Application.Run(CeoDash);
         }
-        private void openNonFullPrivilegeForm(object obj)
+        private void openDeptForm(object obj)
         {
-            Application.Run(new pManager());
+            EmployeeDash EmployeeDash = new EmployeeDash();
+            EmployeeDash.WriteTextBoxTextToLabel(name);
+            Application.Run(EmployeeDash);
+        }
+        private void openManForm(object obj)
+        {
+            pManager pManager = new pManager();
+            pManager.WriteTextBoxTextToLabel(name);
+            Application.Run(pManager);
         }
     }
 }

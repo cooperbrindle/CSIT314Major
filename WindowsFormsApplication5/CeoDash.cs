@@ -16,15 +16,18 @@ namespace WindowsFormsApplication5
         {
             InitializeComponent();
         }
-
+        public void WriteTextBoxTextToLabel(string txt)
+        {
+            label1.Text = txt;
+        }
         private void CEO_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'projectDataSet.Project' table. You can move, or remove it, as needed.
-            this.projectTableAdapter.Fill(this.projectDataSet.Project);
+           // this.projectTableAdapter.Fill(this.projectDataSet.Project);
             // TODO: This line of code loads data into the 'projectDataSet.PolicyProject' table. You can move, or remove it, as needed.
-            this.policyProjectTableAdapter1.Fill(this.projectDataSet.PolicyProject);
+          //  this.policyProjectTableAdapter1.Fill(this.projectDataSet.PolicyProject);
             // TODO: This line of code loads data into the 'policyProject._PolicyProject' table. You can move, or remove it, as needed.
-            this.policyProjectTableAdapter.Fill(this.policyProject._PolicyProject);
+           // this.policyProjectTableAdapter.Fill(this.policyProject._PolicyProject);
 
         }
 

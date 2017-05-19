@@ -14,12 +14,19 @@ namespace WindowsFormsApplication5
     {
         Database db;
         DataTable table;
+        Policy policy;
+
         public AddProjectControl()
         {
             InitializeComponent();
             db = new Database();
             panel1.Hide();
             ProjectListView.SelectedIndexChanged += new EventHandler(itemSelected);
+        }
+
+        public AddProjectControl(Policy p) : this()
+        {
+            policy = p;
         }
 
         private void AddProjectControl_Load(object sender, EventArgs e)
@@ -93,6 +100,20 @@ namespace WindowsFormsApplication5
             panel1.Hide();
             load();
             //this.Show();
+        }
+
+        private void addProjectBtn_Click(object sender, EventArgs e)
+        {
+            
+            String qry = "SELECT COUNT(*) FROM PolicyProject";
+            int id = db.query(qry).Rows.Count + 1;
+            Employee pman = ProjManList.SelectedItem as Employee;
+            Project proj = ProjectListView.SelectedItem as Project;
+            qry = "INSERT INTO PolicyProject VALUES(" + id + ", '" + datePickStart.Value.ToShortDateString() + "', ";
+            qry += "'" + datePickEnd.Value.ToShortDateString() + "', null, 0, 0, null, ";
+            qry += "'" + pman.employeeID + "', " + policy.policyID + ", " + proj.projectID + ", 0)";
+            db.query(qry);
+            this.Dispose();
         }
     }
 
