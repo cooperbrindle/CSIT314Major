@@ -43,7 +43,7 @@ namespace WindowsFormsApplication5
 
         public void WriteTextBoxTextToLabel(string txt)
         {
-            //label2.Text = txt;
+            label2.Text = txt;
         }
         private void pManager_Load(object sender, EventArgs e)
         {

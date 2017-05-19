@@ -64,23 +64,21 @@ namespace WindowsFormsApplication5
 
         private void openCeoForm(object obj)
         {
-            CeoDash CeoDash = new CeoDash();
+            CeoDash CeoDash = new CeoDash(id);
             CeoDash.WriteTextBoxTextToLabel(name);
-            Application.Run(new CeoDash(id));
+            Application.Run(CeoDash);
         }
         private void openDeptForm(object obj)
         {
-            EmployeeDash EmployeeDash = new EmployeeDash();
+            EmployeeDash EmployeeDash = new EmployeeDash(id);
             EmployeeDash.WriteTextBoxTextToLabel(name);
-            //Application.Run(EmployeeDash);
-            Application.Run(new EmployeeDash(id));
+            Application.Run(EmployeeDash);
         }
         private void openManForm(object obj)
         {
-            pManager pManager = new pManager();
+            pManager pManager = new pManager(id);
             pManager.WriteTextBoxTextToLabel(name);
-            //Application.Run(pManager);
-            Application.Run(new pManager(id));
+            Application.Run(pManager);
         }
     }
 }
