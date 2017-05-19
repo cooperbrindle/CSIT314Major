@@ -81,7 +81,7 @@
             // 
             this.Proj_Name.AutoSize = true;
             this.Proj_Name.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
-            this.Proj_Name.Location = new System.Drawing.Point(15, 33);
+            this.Proj_Name.Location = new System.Drawing.Point(16, 34);
             this.Proj_Name.Name = "Proj_Name";
             this.Proj_Name.Size = new System.Drawing.Size(123, 20);
             this.Proj_Name.TabIndex = 1;
@@ -168,11 +168,6 @@
             // timeInput
             // 
             this.timeInput.Location = new System.Drawing.Point(103, 10);
-            this.timeInput.Maximum = new decimal(new int[] {
-            12,
-            0,
-            0,
-            0});
             this.timeInput.Name = "timeInput";
             this.timeInput.Size = new System.Drawing.Size(120, 20);
             this.timeInput.TabIndex = 3;
@@ -201,11 +196,6 @@
             // 
             // wtInput
             // 
-            this.wtInput.Increment = new decimal(new int[] {
-            5,
-            0,
-            0,
-            0});
             this.wtInput.Location = new System.Drawing.Point(103, 10);
             this.wtInput.Name = "wtInput";
             this.wtInput.Size = new System.Drawing.Size(120, 20);
@@ -264,11 +254,6 @@
             // 
             // ecoInput
             // 
-            this.ecoInput.Increment = new decimal(new int[] {
-            5,
-            0,
-            0,
-            0});
             this.ecoInput.Location = new System.Drawing.Point(103, 10);
             this.ecoInput.Name = "ecoInput";
             this.ecoInput.Size = new System.Drawing.Size(120, 20);
@@ -298,11 +283,6 @@
             // 
             // happyInput
             // 
-            this.happyInput.Increment = new decimal(new int[] {
-            10,
-            0,
-            0,
-            0});
             this.happyInput.Location = new System.Drawing.Point(103, 10);
             this.happyInput.Name = "happyInput";
             this.happyInput.Size = new System.Drawing.Size(120, 20);
@@ -327,7 +307,6 @@
             this.createBtn.TabIndex = 7;
             this.createBtn.Text = "Create";
             this.createBtn.UseVisualStyleBackColor = true;
-            this.createBtn.Click += new System.EventHandler(this.createBtn_Click);
             // 
             // TaskControl
             // 

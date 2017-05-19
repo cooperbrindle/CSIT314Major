@@ -23,8 +23,7 @@ namespace WindowsFormsApplication5
             this.processTableAdapter.Fill(this.projectDataSet.Process);
 
         }
-        private void button1_Click(object sender, EventArgs e)
-        { }/*
+
         private void button1_Click(object sender, EventArgs e)
         {
             Controls.TaskControl task = new Controls.TaskControl();
@@ -37,6 +36,6 @@ namespace WindowsFormsApplication5
         public void PanelDisposed(object sender, EventArgs e)
         {
             mainPanel.Show();
-        }*/
+        }
     }
 }

@@ -62,7 +62,7 @@ namespace WindowsFormsApplication5
         }
         private void openNonFullPrivilegeForm(object obj)
         {
-            Application.Run(new EmployeeDash());
+            Application.Run(new pManager());
         }
     }
 }
