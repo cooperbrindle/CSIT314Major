@@ -26,7 +26,10 @@ namespace WindowsFormsApplication5
                 policyBox.Items.Add(p);
             }
         }
-
+        public void WriteTextBoxTextToLabel(string txt)
+        {
+            label2.Text = txt;
+        }
         private void main2_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'projectDataSet.PolicyProject' table. You can move, or remove it, as needed.
