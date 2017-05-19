@@ -76,6 +76,10 @@ CREATE TABLE Process(
 	FOREIGN KEY (policyProjectID) REFERENCES PolicyProject
 );
 
+INSERT INTO Policy VALUES ('policy1', 'policyStatement', 1)
+INSERT INTO Policy VALUES ('policy2', 'policyStatement', 2)
+INSERT INTO Policy VALUES ('policy3', 'policyStatement', 3)
+
 INSERT INTO Employee VALUES ('1', 'ceo', 'phone1', 'address1', 'email@mail', 'department1', 'ceo', 'pass', 1)
 INSERT INTO Employee VALUES ('2', 'name2', 'phone1', 'address1', 'email@mail', 'department1', 'head1', 'pass', 2)
 INSERT INTO Employee VALUES ('3', 'name3', 'phone1', 'address1', 'email@mail', 'department2', 'head2', 'pass', 2)

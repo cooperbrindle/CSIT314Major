@@ -16,7 +16,7 @@ namespace WindowsFormsApplication5
         {
             InitializeComponent();
             Database db = new Database();
-            DataTable table = db.query("SELECT * FROM POLICY");
+            DataTable table = db.query("SELECT * FROM Policy");
             foreach(DataRow r in table.Rows)
             {
                 Policy p = new Policy();
@@ -30,9 +30,9 @@ namespace WindowsFormsApplication5
         private void main2_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'projectDataSet.PolicyProject' table. You can move, or remove it, as needed.
-            this.policyProjectTableAdapter.Fill(this.projectDataSet.PolicyProject);
+            //this.policyProjectTableAdapter.Fill(this.projectDataSet.PolicyProject);
             // TODO: This line of code loads data into the 'projectDataSet.Project' table. You can move, or remove it, as needed.
-            this.projectTableAdapter.Fill(this.projectDataSet.Project);
+            //this.projectTableAdapter.Fill(this.projectDataSet.Project);
 
         }
 

@@ -105,13 +105,13 @@ namespace WindowsFormsApplication5
         private void addProjectBtn_Click(object sender, EventArgs e)
         {
             
-            String qry = "SELECT COUNT(*) FROM ProjectPolicy";
+            String qry = "SELECT COUNT(*) FROM PolicyProject";
             int id = db.query(qry).Rows.Count + 1;
             Employee pman = ProjManList.SelectedItem as Employee;
             Project proj = ProjectListView.SelectedItem as Project;
-            qry = "INSERT INTO ProjectPolicy VALUES(" + id + ", '" + datePickStart.Value.ToShortDateString() + "', ";
+            qry = "INSERT INTO PolicyProject VALUES(" + id + ", '" + datePickStart.Value.ToShortDateString() + "', ";
             qry += "'" + datePickEnd.Value.ToShortDateString() + "', null, 0, 0, null, ";
-            qry += "'" + pman.employeeID + "', " + policy.policyID + "', " + proj.projectID + ", 0";
+            qry += "'" + pman.employeeID + "', " + policy.policyID + ", " + proj.projectID + ", 0)";
             db.query(qry);
             this.Dispose();
         }
