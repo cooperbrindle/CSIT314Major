@@ -27,10 +27,6 @@ namespace WindowsFormsApplication5
                 policyBox.Items.Add(p);
             }
         }
-        public void WriteTextBoxTextToLabel(string txt)
-        {
-            label2.Text = txt;
-        }
 
         public EmployeeDash(int id) : this() { employeeID = id; }
 

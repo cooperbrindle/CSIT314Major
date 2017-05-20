@@ -35,6 +35,7 @@
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.nameLbl = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -97,12 +98,22 @@
             this.pictureBox2.TabIndex = 2;
             this.pictureBox2.TabStop = false;
             // 
+            // nameLbl
+            // 
+            this.nameLbl.AutoSize = true;
+            this.nameLbl.Location = new System.Drawing.Point(30, 21);
+            this.nameLbl.Name = "nameLbl";
+            this.nameLbl.Size = new System.Drawing.Size(35, 13);
+            this.nameLbl.TabIndex = 6;
+            this.nameLbl.Text = "label2";
+            // 
             // @base
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLight;
             this.ClientSize = new System.Drawing.Size(810, 424);
+            this.Controls.Add(this.nameLbl);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.LogoutBtn);
             this.Controls.Add(this.dateTimePicker1);
@@ -115,6 +126,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -125,5 +137,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Label nameLbl;
     }
 }
