@@ -77,6 +77,12 @@
     <Compile Include="Controls\CreateProjectControl.Designer.cs">
       <DependentUpon>CreateProjectControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="Controls\ProjectProgress.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\ProjectProgress.Designer.cs">
+      <DependentUpon>ProjectProgress.cs</DependentUpon>
+    </Compile>
     <Compile Include="Controls\TaskControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -141,6 +147,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Controls\CreateProjectControl.resx">
       <DependentUpon>CreateProjectControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ProjectProgress.resx">
+      <DependentUpon>ProjectProgress.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Controls\TaskControl.resx">
       <DependentUpon>TaskControl.cs</DependentUpon>

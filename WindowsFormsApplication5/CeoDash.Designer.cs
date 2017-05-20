@@ -52,6 +52,7 @@
             this.projectBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.policyProjectTableAdapter1 = new WindowsFormsApplication5.ProjectDataSetTableAdapters.PolicyProjectTableAdapter();
             this.projectTableAdapter = new WindowsFormsApplication5.ProjectDataSetTableAdapters.ProjectTableAdapter();
+            this.policyBox = new System.Windows.Forms.ComboBox();
             this.flowLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.policyProjectBindingSource2)).BeginInit();
@@ -205,11 +206,20 @@
             // 
             this.projectTableAdapter.ClearBeforeFill = true;
             // 
+            // policyBox
+            // 
+            this.policyBox.FormattingEnabled = true;
+            this.policyBox.Location = new System.Drawing.Point(197, 32);
+            this.policyBox.Name = "policyBox";
+            this.policyBox.Size = new System.Drawing.Size(166, 21);
+            this.policyBox.TabIndex = 10;
+            // 
             // CeoDash
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(810, 424);
+            this.Controls.Add(this.policyBox);
             this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.mainPanel);
             this.Name = "CeoDash";
@@ -217,6 +227,7 @@
             this.Load += new System.EventHandler(this.CEO_Load);
             this.Controls.SetChildIndex(this.mainPanel, 0);
             this.Controls.SetChildIndex(this.flowLayoutPanel1, 0);
+            this.Controls.SetChildIndex(this.policyBox, 0);
             this.flowLayoutPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.policyProjectBindingSource2)).EndInit();
@@ -228,6 +239,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.chart2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.projectBindingSource)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -250,5 +262,6 @@
         private System.Windows.Forms.DataVisualization.Charting.Chart chart2;
         private System.Windows.Forms.BindingSource projectBindingSource;
         private ProjectDataSetTableAdapters.ProjectTableAdapter projectTableAdapter;
+        private System.Windows.Forms.ComboBox policyBox;
     }
 }

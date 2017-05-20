@@ -16,6 +16,16 @@ namespace WindowsFormsApplication5
         public CeoDash()
         {
             InitializeComponent();
+            Database db = new Database();
+            DataTable table = db.query("SELECT * FROM Policy");
+            foreach (DataRow r in table.Rows)
+            {
+                Policy p = new Policy();
+                p.policyID = Convert.ToInt32(r[2].ToString());
+                p.name = r[0].ToString();
+                p.statement = r[1].ToString();
+                policyBox.Items.Add(p);
+            }
         }
 
         public CeoDash(int id) : this() { employeeID = id; }
@@ -53,7 +63,10 @@ namespace WindowsFormsApplication5
 
         private void button3_Click(object sender, EventArgs e)
         {
+            if(policyBox.SelectedIndex >= 0)
+            {
 
+            }
         }
     }
 }
