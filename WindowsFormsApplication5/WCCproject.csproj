@@ -65,6 +65,12 @@
     <Compile Include="CeoDash.Designer.cs">
       <DependentUpon>CeoDash.cs</DependentUpon>
     </Compile>
+    <Compile Include="Controls\addTask.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\addTask.Designer.cs">
+      <DependentUpon>addTask.cs</DependentUpon>
+    </Compile>
     <Compile Include="Controls\CreateProjectControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -129,6 +135,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CeoDash.resx">
       <DependentUpon>CeoDash.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\addTask.resx">
+      <DependentUpon>addTask.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Controls\CreateProjectControl.resx">
       <DependentUpon>CreateProjectControl.cs</DependentUpon>
