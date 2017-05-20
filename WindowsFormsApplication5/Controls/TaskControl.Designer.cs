@@ -40,7 +40,6 @@
             this.timeInput = new System.Windows.Forms.NumericUpDown();
             this.timeLbl = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.wtInput = new System.Windows.Forms.NumericUpDown();
             this.wtLbl = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
             this.wrkrInput = new System.Windows.Forms.NumericUpDown();
@@ -52,19 +51,22 @@
             this.happyInput = new System.Windows.Forms.NumericUpDown();
             this.happyLbl = new System.Windows.Forms.Label();
             this.createBtn = new System.Windows.Forms.Button();
+            this.trackBar1 = new System.Windows.Forms.TrackBar();
+            this.wtInput = new System.Windows.Forms.NumericUpDown();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cstInput)).BeginInit();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.timeInput)).BeginInit();
             this.panel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.wtInput)).BeginInit();
             this.panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.wrkrInput)).BeginInit();
             this.panel6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ecoInput)).BeginInit();
             this.panel7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.happyInput)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.wtInput)).BeginInit();
             this.SuspendLayout();
             // 
             // titleLbl
@@ -186,6 +188,7 @@
             // panel4
             // 
             this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel4.Controls.Add(this.trackBar1);
             this.panel4.Controls.Add(this.wtInput);
             this.panel4.Controls.Add(this.wtLbl);
             this.panel4.Location = new System.Drawing.Point(20, 238);
@@ -193,13 +196,6 @@
             this.panel4.Padding = new System.Windows.Forms.Padding(6, 10, 0, 0);
             this.panel4.Size = new System.Drawing.Size(263, 43);
             this.panel4.TabIndex = 6;
-            // 
-            // wtInput
-            // 
-            this.wtInput.Location = new System.Drawing.Point(103, 10);
-            this.wtInput.Name = "wtInput";
-            this.wtInput.Size = new System.Drawing.Size(120, 20);
-            this.wtInput.TabIndex = 3;
             // 
             // wtLbl
             // 
@@ -307,6 +303,23 @@
             this.createBtn.TabIndex = 7;
             this.createBtn.Text = "Create";
             this.createBtn.UseVisualStyleBackColor = true;
+            this.createBtn.Click += new System.EventHandler(this.createBtn_Click);
+            // 
+            // trackBar1
+            // 
+            this.trackBar1.Location = new System.Drawing.Point(98, 10);
+            this.trackBar1.Name = "trackBar1";
+            this.trackBar1.Size = new System.Drawing.Size(116, 45);
+            this.trackBar1.TabIndex = 4;
+            this.trackBar1.Scroll += new System.EventHandler(this.trackBar1_Scroll);
+            // 
+            // wtInput
+            // 
+            this.wtInput.Location = new System.Drawing.Point(220, 10);
+            this.wtInput.Name = "wtInput";
+            this.wtInput.Size = new System.Drawing.Size(42, 20);
+            this.wtInput.TabIndex = 3;
+            this.wtInput.ValueChanged += new System.EventHandler(this.wtInput_ValueChanged);
             // 
             // TaskControl
             // 
@@ -335,7 +348,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.timeInput)).EndInit();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.wtInput)).EndInit();
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.wrkrInput)).EndInit();
@@ -345,6 +357,8 @@
             this.panel7.ResumeLayout(false);
             this.panel7.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.happyInput)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.wtInput)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -364,7 +378,6 @@
         private System.Windows.Forms.NumericUpDown timeInput;
         private System.Windows.Forms.Label timeLbl;
         private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.NumericUpDown wtInput;
         private System.Windows.Forms.Label wtLbl;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.NumericUpDown wrkrInput;
@@ -376,5 +389,7 @@
         private System.Windows.Forms.NumericUpDown happyInput;
         private System.Windows.Forms.Label happyLbl;
         private System.Windows.Forms.Button createBtn;
+        private System.Windows.Forms.TrackBar trackBar1;
+        private System.Windows.Forms.NumericUpDown wtInput;
     }
 }

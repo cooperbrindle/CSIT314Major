@@ -1,5 +1,5 @@
 ﻿
-drop table Process;
+drop table Task;
 drop table PolicyProject;
 drop table ProjectManager;
 drop table Policy;
@@ -66,11 +66,15 @@ CREATE TABLE PolicyProject (
 	FOREIGN KEY (projectID) REFERENCES Project
 );
 
-CREATE TABLE Process(
+CREATE TABLE Task(
 	processID INT,
-	instructions VARCHAR(255),
-	milestones VARCHAR(80),
+	description VARCHAR(255),
 	cost INT,
+	workers INT, 
+	TimeFrame INT,
+	ecoImpact INT,
+	happiness INT,
+	weight INT,
 	policyProjectID VARCHAR(80),
 	PRIMARY KEY (processID),
 	FOREIGN KEY (policyProjectID) REFERENCES PolicyProject

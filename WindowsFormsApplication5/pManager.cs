@@ -56,12 +56,17 @@ namespace WindowsFormsApplication5
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Controls.TaskControl task = new Controls.TaskControl();
-            task.Location = new Point { X = 236, Y = 80 };
-            mainPanel.Hide();
-            task.Disposed += new EventHandler(PanelDisposed);
-            this.Controls.Add(task);
-            task.Show();
+            if(projectBox.SelectedIndex >= 0)
+            {
+                PolicyProjectModel p = projectBox.SelectedItem as PolicyProjectModel;
+                Controls.TaskControl task = new Controls.TaskControl(p.policyProjectID);
+                task.Location = mainPanel.Location;
+                mainPanel.Hide();
+                task.Disposed += new EventHandler(PanelDisposed);
+                this.Controls.Add(task);
+                task.Show();
+            }
+            
         }
         public void PanelDisposed(object sender, EventArgs e)
         {
