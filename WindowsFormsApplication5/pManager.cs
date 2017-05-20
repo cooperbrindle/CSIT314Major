@@ -42,11 +42,7 @@ namespace WindowsFormsApplication5
                 projectBox.Items.Add(p);
             }
         }
-
-        public void WriteTextBoxTextToLabel(string txt)
-        {
-            label2.Text = txt;
-        }
+        
         private void pManager_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'projectDataSet.Process' table. You can move, or remove it, as needed.

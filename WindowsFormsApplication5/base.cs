@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Threading;
 
 namespace WindowsFormsApplication5
 {
@@ -19,7 +20,21 @@ namespace WindowsFormsApplication5
         
         private void button1_Click(object sender, EventArgs e)
         {
+            Thread th = new Thread(start);
+            th.SetApartmentState(ApartmentState.STA);
+            th.Start();
             this.Close();
+            this.Dispose();
+        }
+
+        private void start()
+        {
+            Application.Run(new LoginForm());
+        }
+
+        public void writeName(String n)
+        {
+            nameLbl.Text = n;
         }
     }
 }

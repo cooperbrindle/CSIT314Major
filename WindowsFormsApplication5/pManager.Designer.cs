@@ -47,7 +47,6 @@
             this.processBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.projectDataSet = new WindowsFormsApplication5.ProjectDataSet();
             this.processTableAdapter = new WindowsFormsApplication5.ProjectDataSetTableAdapters.ProcessTableAdapter();
-            this.label2 = new System.Windows.Forms.Label();
             this.projectBox = new System.Windows.Forms.ComboBox();
             this.flowLayoutPanel1.SuspendLayout();
             this.mainPanel.SuspendLayout();
@@ -183,16 +182,6 @@
             // 
             this.processTableAdapter.ClearBeforeFill = true;
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(76, 19);
-            this.label2.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(35, 13);
-            this.label2.TabIndex = 8;
-            this.label2.Text = "label2";
-            // 
             // projectBox
             // 
             this.projectBox.FormattingEnabled = true;
@@ -208,7 +197,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(811, 427);
             this.Controls.Add(this.projectBox);
-            this.Controls.Add(this.label2);
             this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.mainPanel);
             this.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
@@ -217,7 +205,6 @@
             this.Load += new System.EventHandler(this.pManager_Load);
             this.Controls.SetChildIndex(this.mainPanel, 0);
             this.Controls.SetChildIndex(this.flowLayoutPanel1, 0);
-            this.Controls.SetChildIndex(this.label2, 0);
             this.Controls.SetChildIndex(this.projectBox, 0);
             this.flowLayoutPanel1.ResumeLayout(false);
             this.mainPanel.ResumeLayout(false);
@@ -226,7 +213,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.processBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.projectDataSet)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -244,7 +230,6 @@
         private System.Windows.Forms.BindingSource processBindingSource;
         private ProjectDataSetTableAdapters.ProcessTableAdapter processTableAdapter;
         private System.Windows.Forms.DataVisualization.Charting.Chart chart2;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ComboBox projectBox;
     }
 }

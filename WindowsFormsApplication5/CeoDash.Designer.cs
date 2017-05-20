@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
@@ -45,7 +45,6 @@
             this.policyProjectBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.policyProjectBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.policyProject = new WindowsFormsApplication5.PolicyProject();
-            this.label1 = new System.Windows.Forms.Label();
             this.policyProjectTableAdapter = new WindowsFormsApplication5.PolicyProjectTableAdapters.PolicyProjectTableAdapter();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.mainPanel = new System.Windows.Forms.FlowLayoutPanel();
@@ -111,22 +110,22 @@
             // 
             // chart1
             // 
-            chartArea3.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea3);
+            chartArea1.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea1);
             this.chart1.DataSource = this.policyProjectBindingSource2;
-            legend3.Name = "Legend1";
-            legend3.Title = "Policy Name";
-            this.chart1.Legends.Add(legend3);
+            legend1.Name = "Legend1";
+            legend1.Title = "Policy Name";
+            this.chart1.Legends.Add(legend1);
             this.chart1.Location = new System.Drawing.Point(279, 13);
             this.chart1.Name = "chart1";
-            series3.ChartArea = "ChartArea1";
-            series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
-            series3.IsValueShownAsLabel = true;
-            series3.Legend = "Legend1";
-            series3.Name = "Policy Budget";
-            series3.XValueMember = "policyProjectID";
-            series3.YValueMembers = "finalCost";
-            this.chart1.Series.Add(series3);
+            series1.ChartArea = "ChartArea1";
+            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
+            series1.IsValueShownAsLabel = true;
+            series1.Legend = "Legend1";
+            series1.Name = "Policy Budget";
+            series1.XValueMember = "policyProjectID";
+            series1.YValueMembers = "finalCost";
+            this.chart1.Series.Add(series1);
             this.chart1.Size = new System.Drawing.Size(272, 282);
             this.chart1.TabIndex = 6;
             this.chart1.Text = "chart1";
@@ -156,15 +155,6 @@
             this.policyProject.DataSetName = "PolicyProject";
             this.policyProject.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(32, 19);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(159, 13);
-            this.label1.TabIndex = 7;
-            this.label1.Text = "DAD PUT USERNAMES HERE";
-            // 
             // policyProjectTableAdapter
             // 
             this.policyProjectTableAdapter.ClearBeforeFill = true;
@@ -185,19 +175,19 @@
             // 
             // chart2
             // 
-            chartArea4.Name = "ChartArea1";
-            this.chart2.ChartAreas.Add(chartArea4);
+            chartArea2.Name = "ChartArea1";
+            this.chart2.ChartAreas.Add(chartArea2);
             this.chart2.DataSource = this.projectBindingSource;
-            legend4.Name = "Legend1";
-            this.chart2.Legends.Add(legend4);
+            legend2.Name = "Legend1";
+            this.chart2.Legends.Add(legend2);
             this.chart2.Location = new System.Drawing.Point(1, 13);
             this.chart2.Name = "chart2";
-            series4.ChartArea = "ChartArea1";
-            series4.Legend = "Legend1";
-            series4.Name = "Series1";
-            series4.XValueMember = "projectID";
-            series4.YValueMembers = "budget";
-            this.chart2.Series.Add(series4);
+            series2.ChartArea = "ChartArea1";
+            series2.Legend = "Legend1";
+            series2.Name = "Series1";
+            series2.XValueMember = "projectID";
+            series2.YValueMembers = "budget";
+            this.chart2.Series.Add(series2);
             this.chart2.Size = new System.Drawing.Size(272, 282);
             this.chart2.TabIndex = 7;
             this.chart2.Text = "chart2";
@@ -222,11 +212,9 @@
             this.ClientSize = new System.Drawing.Size(810, 424);
             this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.mainPanel);
-            this.Controls.Add(this.label1);
             this.Name = "CeoDash";
             this.Text = "CEO";
             this.Load += new System.EventHandler(this.CEO_Load);
-            this.Controls.SetChildIndex(this.label1, 0);
             this.Controls.SetChildIndex(this.mainPanel, 0);
             this.Controls.SetChildIndex(this.flowLayoutPanel1, 0);
             this.flowLayoutPanel1.ResumeLayout(false);
@@ -240,7 +228,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.chart2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.projectBindingSource)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -251,7 +238,6 @@
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.BindingSource policyProjectBindingSource;
         private PolicyProject policyProject;
         private System.Windows.Forms.BindingSource policyProjectBindingSource1;

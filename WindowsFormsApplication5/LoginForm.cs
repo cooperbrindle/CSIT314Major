@@ -17,7 +17,7 @@ namespace WindowsFormsApplication5
         string name;
         Thread th;
         Database db;
-        int id;
+        int id, priv;
         public LoginForm()
         {
             InitializeComponent();
@@ -43,14 +43,17 @@ namespace WindowsFormsApplication5
             if(dt.Rows.Count > 0)
             {
                 id = Convert.ToInt32(dt.Rows[0][2].ToString());
-                if (dt.Rows[0][1].ToString() == "1")
+                priv = Convert.ToInt32(dt.Rows[0][1].ToString());
+                /*if (dt.Rows[0][1].ToString() == "1")
                     th = new Thread(openCeoForm);
 
                 else if (dt.Rows[0][1].ToString() == "2")
                     th = new Thread(openDeptForm);
                 else if (dt.Rows[0][1].ToString() == "3")
                     th = new Thread(openManForm);
+                */
 
+                th = new Thread(openForm);
                 
                 this.Close();
                 th.SetApartmentState(ApartmentState.STA);
@@ -62,11 +65,34 @@ namespace WindowsFormsApplication5
             }
         }
 
-        private void openCeoForm(object obj)
+        private void loggedOut(object obj, EventArgs e)
         {
-            CeoDash CeoDash = new CeoDash(id);
-            CeoDash.WriteTextBoxTextToLabel(name);
-            Application.Run(CeoDash);
+            th.Join();
+            this.Activate();
+        }
+
+        private void openForm(object obj)
+        {
+            @base form = new @base();
+            switch (priv)
+            {
+                case 1: form = new CeoDash(id);
+                    break;
+                case 2: form = new EmployeeDash(id);
+                    break;
+                case 3: form = new pManager(id);
+                    break;
+            }
+            //form.WriteTextBoxTextToLabel(name);
+            form.Disposed += new EventHandler(loggedOut);
+            form.writeName(name);
+            Application.Run(form);
+        }
+        /*private void openCeoForm(object obj)
+        {
+            CeoDash EmployeeDash = new CeoDash(id);
+            EmployeeDash.WriteTextBoxTextToLabel(name);
+            Application.Run(EmployeeDash);
         }
         private void openDeptForm(object obj)
         {
@@ -79,6 +105,6 @@ namespace WindowsFormsApplication5
             pManager pManager = new pManager(id);
             pManager.WriteTextBoxTextToLabel(name);
             Application.Run(pManager);
-        }
+        }*/
     }
 }

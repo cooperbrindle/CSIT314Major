@@ -17,10 +17,6 @@ namespace WindowsFormsApplication5
         {
             InitializeComponent();
         }
-        public void WriteTextBoxTextToLabel(string txt)
-        {
-            label1.Text = txt;
-        }
 
         public CeoDash(int id) : this() { employeeID = id; }
 
