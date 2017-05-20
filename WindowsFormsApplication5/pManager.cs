@@ -16,8 +16,13 @@ namespace WindowsFormsApplication5
         public pManager()
         {
             InitializeComponent();
+        }
+
+        public pManager(int id) : this() {
+            employeeID = id;
             Database db = new Database();
-            DataTable table = db.query("SELECT * FROM PolicyProject WHERE projectManagerID = "+employeeID);
+            DataTable table = db.query("SELECT * FROM PolicyProject WHERE projectManagerID = '" + employeeID + "'");
+            //DataTable table = db.query("SELECT * FROM PolicyProject");
             foreach (DataRow r in table.Rows)
             {
                 PolicyProjectModel p = new PolicyProjectModel
@@ -36,10 +41,7 @@ namespace WindowsFormsApplication5
                 };
                 projectBox.Items.Add(p);
             }
-            //projectBox.SelectedIndex = 0;
         }
-
-        public pManager(int id) : this() { employeeID = id; }
 
         public void WriteTextBoxTextToLabel(string txt)
         {
