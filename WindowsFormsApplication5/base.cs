@@ -24,7 +24,7 @@ namespace WindowsFormsApplication5
             th.SetApartmentState(ApartmentState.STA);
             th.Start();
             this.Close();
-            this.Dispose();
+            
         }
 
         private void start()
