@@ -34,7 +34,7 @@ namespace WindowsFormsApplication5
 
         public void writeName(String n)
         {
-            nameLbl.Text = n;
+            nameLbl.Text = "Welcome " +n;
         }
     }
 }
