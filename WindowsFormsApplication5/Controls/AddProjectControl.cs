@@ -115,6 +115,11 @@ namespace WindowsFormsApplication5
             db.query(qry);
             this.Dispose();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Dispose();
+        }
     }
 
 

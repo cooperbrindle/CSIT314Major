@@ -57,7 +57,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(215, 34);
+            this.label1.Location = new System.Drawing.Point(178, 34);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(75, 13);
             this.label1.TabIndex = 0;
@@ -66,7 +66,7 @@
             // polName
             // 
             this.polName.AutoSize = true;
-            this.polName.Location = new System.Drawing.Point(218, 68);
+            this.polName.Location = new System.Drawing.Point(181, 68);
             this.polName.Name = "polName";
             this.polName.Size = new System.Drawing.Size(35, 13);
             this.polName.TabIndex = 1;
@@ -75,7 +75,7 @@
             // projName
             // 
             this.projName.AutoSize = true;
-            this.projName.Location = new System.Drawing.Point(218, 96);
+            this.projName.Location = new System.Drawing.Point(181, 96);
             this.projName.Name = "projName";
             this.projName.Size = new System.Drawing.Size(35, 13);
             this.projName.TabIndex = 2;
@@ -84,7 +84,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(51, 129);
+            this.label2.Location = new System.Drawing.Point(14, 112);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(96, 13);
             this.label2.TabIndex = 3;
@@ -92,17 +92,17 @@
             // 
             // descBox
             // 
-            this.descBox.Location = new System.Drawing.Point(54, 157);
+            this.descBox.Location = new System.Drawing.Point(17, 128);
             this.descBox.Multiline = true;
             this.descBox.Name = "descBox";
             this.descBox.ReadOnly = true;
-            this.descBox.Size = new System.Drawing.Size(331, 100);
+            this.descBox.Size = new System.Drawing.Size(289, 100);
             this.descBox.TabIndex = 4;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(51, 281);
+            this.label3.Location = new System.Drawing.Point(14, 248);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(85, 13);
             this.label3.TabIndex = 5;
@@ -111,7 +111,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(51, 314);
+            this.label4.Location = new System.Drawing.Point(14, 281);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(77, 13);
             this.label4.TabIndex = 6;
@@ -119,25 +119,25 @@
             // 
             // pManBox
             // 
-            this.pManBox.Location = new System.Drawing.Point(142, 278);
+            this.pManBox.Location = new System.Drawing.Point(105, 245);
             this.pManBox.Multiline = true;
             this.pManBox.Name = "pManBox";
             this.pManBox.ReadOnly = true;
-            this.pManBox.Size = new System.Drawing.Size(243, 27);
+            this.pManBox.Size = new System.Drawing.Size(201, 27);
             this.pManBox.TabIndex = 8;
             // 
             // budgetBox
             // 
-            this.budgetBox.Location = new System.Drawing.Point(142, 311);
+            this.budgetBox.Location = new System.Drawing.Point(105, 276);
             this.budgetBox.Multiline = true;
             this.budgetBox.Name = "budgetBox";
             this.budgetBox.ReadOnly = true;
-            this.budgetBox.Size = new System.Drawing.Size(243, 27);
+            this.budgetBox.Size = new System.Drawing.Size(201, 27);
             this.budgetBox.TabIndex = 9;
             // 
             // costBox
             // 
-            this.costBox.Location = new System.Drawing.Point(482, 259);
+            this.costBox.Location = new System.Drawing.Point(419, 246);
             this.costBox.Multiline = true;
             this.costBox.Name = "costBox";
             this.costBox.ReadOnly = true;
@@ -147,7 +147,7 @@
             // CostLbl
             // 
             this.CostLbl.AutoSize = true;
-            this.CostLbl.Location = new System.Drawing.Point(391, 262);
+            this.CostLbl.Location = new System.Drawing.Point(328, 249);
             this.CostLbl.Name = "CostLbl";
             this.CostLbl.Size = new System.Drawing.Size(28, 13);
             this.CostLbl.TabIndex = 11;
@@ -155,7 +155,7 @@
             // 
             // complDateBox
             // 
-            this.complDateBox.Location = new System.Drawing.Point(482, 224);
+            this.complDateBox.Location = new System.Drawing.Point(419, 211);
             this.complDateBox.Multiline = true;
             this.complDateBox.Name = "complDateBox";
             this.complDateBox.ReadOnly = true;
@@ -165,7 +165,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(391, 227);
+            this.label7.Location = new System.Drawing.Point(328, 214);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(85, 13);
             this.label7.TabIndex = 13;
@@ -174,7 +174,7 @@
             // ProjectComboBox
             // 
             this.ProjectComboBox.FormattingEnabled = true;
-            this.ProjectComboBox.Location = new System.Drawing.Point(97, 3);
+            this.ProjectComboBox.Location = new System.Drawing.Point(60, 3);
             this.ProjectComboBox.Name = "ProjectComboBox";
             this.ProjectComboBox.Size = new System.Drawing.Size(121, 21);
             this.ProjectComboBox.TabIndex = 15;
@@ -183,7 +183,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(51, 6);
+            this.label6.Location = new System.Drawing.Point(14, 6);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(40, 13);
             this.label6.TabIndex = 16;
@@ -191,7 +191,7 @@
             // 
             // startDateBox
             // 
-            this.startDateBox.Location = new System.Drawing.Point(482, 154);
+            this.startDateBox.Location = new System.Drawing.Point(419, 141);
             this.startDateBox.Multiline = true;
             this.startDateBox.Name = "startDateBox";
             this.startDateBox.ReadOnly = true;
@@ -201,7 +201,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(391, 157);
+            this.label8.Location = new System.Drawing.Point(328, 144);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(55, 13);
             this.label8.TabIndex = 17;
@@ -209,7 +209,7 @@
             // 
             // estDateBox
             // 
-            this.estDateBox.Location = new System.Drawing.Point(482, 189);
+            this.estDateBox.Location = new System.Drawing.Point(419, 176);
             this.estDateBox.Multiline = true;
             this.estDateBox.Name = "estDateBox";
             this.estDateBox.ReadOnly = true;
@@ -219,7 +219,7 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(391, 192);
+            this.label9.Location = new System.Drawing.Point(328, 179);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(73, 13);
             this.label9.TabIndex = 19;
@@ -227,7 +227,7 @@
             // 
             // progressBar1
             // 
-            this.progressBar1.Location = new System.Drawing.Point(394, 68);
+            this.progressBar1.Location = new System.Drawing.Point(303, 68);
             this.progressBar1.Name = "progressBar1";
             this.progressBar1.Size = new System.Drawing.Size(218, 40);
             this.progressBar1.TabIndex = 21;
@@ -235,7 +235,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(394, 49);
+            this.label5.Location = new System.Drawing.Point(303, 49);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(48, 13);
             this.label5.TabIndex = 22;
@@ -243,7 +243,7 @@
             // 
             // weightBox
             // 
-            this.weightBox.Location = new System.Drawing.Point(482, 289);
+            this.weightBox.Location = new System.Drawing.Point(419, 278);
             this.weightBox.Multiline = true;
             this.weightBox.Name = "weightBox";
             this.weightBox.ReadOnly = true;
@@ -253,7 +253,7 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(391, 292);
+            this.label10.Location = new System.Drawing.Point(328, 279);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(41, 13);
             this.label10.TabIndex = 23;
@@ -261,7 +261,7 @@
             // 
             // backBtn
             // 
-            this.backBtn.Location = new System.Drawing.Point(537, 6);
+            this.backBtn.Location = new System.Drawing.Point(446, 6);
             this.backBtn.Name = "backBtn";
             this.backBtn.Size = new System.Drawing.Size(75, 23);
             this.backBtn.TabIndex = 25;
@@ -298,7 +298,7 @@
             this.Controls.Add(this.polName);
             this.Controls.Add(this.label1);
             this.Name = "ProjectReport";
-            this.Size = new System.Drawing.Size(636, 398);
+            this.Size = new System.Drawing.Size(558, 312);
             this.ResumeLayout(false);
             this.PerformLayout();
 

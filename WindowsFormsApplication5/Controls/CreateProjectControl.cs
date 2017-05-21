@@ -38,5 +38,10 @@ namespace WindowsFormsApplication5
                 stakeholderTxt.Text != String.Empty && deptTxt.Text != String.Empty);
                 
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Dispose();
+        }
     }
 }

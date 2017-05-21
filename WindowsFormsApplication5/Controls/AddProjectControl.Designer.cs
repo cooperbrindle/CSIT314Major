@@ -39,6 +39,7 @@
             this.startDateLbl = new System.Windows.Forms.Label();
             this.addProjectBtn = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.backBtn = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -72,9 +73,9 @@
             this.panel1.Controls.Add(this.ProjManLbl);
             this.panel1.Controls.Add(this.startDateLbl);
             this.panel1.Controls.Add(this.addProjectBtn);
-            this.panel1.Location = new System.Drawing.Point(207, 3);
+            this.panel1.Location = new System.Drawing.Point(207, 34);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(336, 310);
+            this.panel1.Size = new System.Drawing.Size(336, 279);
             this.panel1.TabIndex = 2;
             // 
             // ProjManList
@@ -152,11 +153,22 @@
             this.label1.TabIndex = 3;
             this.label1.Text = "New Projects";
             // 
+            // backBtn
+            // 
+            this.backBtn.Location = new System.Drawing.Point(467, 6);
+            this.backBtn.Name = "backBtn";
+            this.backBtn.Size = new System.Drawing.Size(75, 23);
+            this.backBtn.TabIndex = 4;
+            this.backBtn.Text = "Back";
+            this.backBtn.UseVisualStyleBackColor = true;
+            this.backBtn.Click += new System.EventHandler(this.button1_Click);
+            // 
             // AddProjectControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.Controls.Add(this.backBtn);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.createProjectBtn);
@@ -184,5 +196,6 @@
         private System.Windows.Forms.Label ProjManLbl;
         private System.Windows.Forms.Label startDateLbl;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button backBtn;
     }
 }

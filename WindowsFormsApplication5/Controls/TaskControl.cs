@@ -66,6 +66,11 @@ namespace WindowsFormsApplication5.Controls
             return taskTxt.Text != String.Empty && wrkrInput.Value > 0 && 
                 timeInput.Value > 0 && wtInput.Value > 0;
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Dispose();
+        }
     }
 
 }

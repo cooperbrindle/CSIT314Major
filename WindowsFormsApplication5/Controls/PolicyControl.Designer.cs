@@ -34,6 +34,7 @@
             this.polDescTxt = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.Create = new System.Windows.Forms.Button();
+            this.Back = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // NameLbl
@@ -92,12 +93,23 @@
             this.Create.UseVisualStyleBackColor = true;
             this.Create.Click += new System.EventHandler(this.Create_Click);
             // 
+            // Back
+            // 
+            this.Back.Location = new System.Drawing.Point(467, 6);
+            this.Back.Name = "Back";
+            this.Back.Size = new System.Drawing.Size(75, 23);
+            this.Back.TabIndex = 6;
+            this.Back.Text = "Back";
+            this.Back.UseVisualStyleBackColor = true;
+            this.Back.Click += new System.EventHandler(this.button1_Click);
+            // 
             // PolicyControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDark;
             this.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.Controls.Add(this.Back);
             this.Controls.Add(this.Create);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.polDescTxt);
@@ -119,5 +131,6 @@
         private System.Windows.Forms.TextBox polDescTxt;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button Create;
+        private System.Windows.Forms.Button Back;
     }
 }

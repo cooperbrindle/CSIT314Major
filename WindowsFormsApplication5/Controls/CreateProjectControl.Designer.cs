@@ -46,6 +46,7 @@
             this.flowLayoutPanel4 = new System.Windows.Forms.FlowLayoutPanel();
             this.flowLayoutPanel5 = new System.Windows.Forms.FlowLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.backBtn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.budgetInput)).BeginInit();
             this.flowLayoutPanel1.SuspendLayout();
             this.flowLayoutPanel2.SuspendLayout();
@@ -230,11 +231,22 @@
             this.panel1.Size = new System.Drawing.Size(268, 219);
             this.panel1.TabIndex = 17;
             // 
+            // backBtn
+            // 
+            this.backBtn.Location = new System.Drawing.Point(467, 6);
+            this.backBtn.Name = "backBtn";
+            this.backBtn.Size = new System.Drawing.Size(75, 23);
+            this.backBtn.TabIndex = 18;
+            this.backBtn.Text = "Back";
+            this.backBtn.UseVisualStyleBackColor = true;
+            this.backBtn.Click += new System.EventHandler(this.button1_Click);
+            // 
             // CreateProjectControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.Controls.Add(this.backBtn);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.createBtn);
@@ -277,5 +289,6 @@
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel4;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel5;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Button backBtn;
     }
 }
