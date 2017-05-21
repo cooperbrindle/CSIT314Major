@@ -123,6 +123,7 @@
             this.button4.TabIndex = 10;
             this.button4.Text = "View Report";
             this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // mainPanel
             // 
@@ -226,6 +227,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.projectDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.projectBindingSource)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 

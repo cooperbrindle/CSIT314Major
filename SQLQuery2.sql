@@ -39,7 +39,7 @@ CREATE TABLE Policy(
 
 CREATE TABLE Project(
 	projectID INT,
-	name VARCHAR(80),
+	name VARCHAR(80) UNIQUE,
 	objective VARCHAR(255),
 	budget INT,
 	Stakeholder VARCHAR(80),
@@ -57,7 +57,7 @@ CREATE TABLE PolicyProject (
 	departmentHeadID VARCHAR(80),
 	projectManagerID VARCHAR(80),
 	policyID INT,
-	projectID INT,
+	projectID INT UNIQUE,
 	weighting INT,
 	PRIMARY KEY (policyProjectID),
 	FOREIGN KEY (departmentHeadID) REFERENCES Employee(employeeID),

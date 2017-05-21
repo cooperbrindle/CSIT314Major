@@ -56,5 +56,21 @@ namespace WindowsFormsApplication5
         {
             mainPanel.Show();
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            if(policyBox.SelectedIndex >= 0)
+            {
+                Policy p = policyBox.SelectedItem as Policy;
+                Controls.ProjectReport pr = new Controls.ProjectReport(p.policyID);
+                pr.Location = mainPanel.Location;
+                pr.Size = mainPanel.Size;
+                pr.Disposed += new EventHandler(PanelDisposed);
+                this.Controls.Add(pr);
+                mainPanel.Hide();
+                pr.Show();
+            }
+            
+        }
     }
 }

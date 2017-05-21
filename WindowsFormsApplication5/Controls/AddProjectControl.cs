@@ -36,7 +36,7 @@ namespace WindowsFormsApplication5
 
         public void load()
         {
-            String queryStr = "SELECT projectID, name FROM Project";
+            String queryStr = "SELECT projectID, name FROM Project WHERE projectID NOT IN (SELECT projectID FROM PolicyProject WHERE policyID = "+policy.policyID+")";
             table = db.query(queryStr);
 
             ProjectListView.Items.Clear();
@@ -106,7 +106,7 @@ namespace WindowsFormsApplication5
         {
             
             String qry = "SELECT COUNT(*) FROM PolicyProject";
-            int id = db.query(qry).Rows.Count + 1;
+            int id = Convert.ToInt32(db.query(qry).Rows[0][0].ToString()) + 1;
             Employee pman = ProjManList.SelectedItem as Employee;
             Project proj = ProjectListView.SelectedItem as Project;
             qry = "INSERT INTO PolicyProject VALUES(" + id + ", '" + datePickStart.Value.ToShortDateString() + "', ";
