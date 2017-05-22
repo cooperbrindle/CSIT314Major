@@ -33,5 +33,16 @@ namespace WindowsFormsApplication5.Properties {
                 return ((string)(this["ProjectConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\Anthony\\Documents\\NE" +
+            "Wdata.mdf;Integrated Security=True;Connect Timeout=30")]
+        public string NEWdataConnectionString {
+            get {
+                return ((string)(this["NEWdataConnectionString"]));
+            }
+        }
     }
 }
