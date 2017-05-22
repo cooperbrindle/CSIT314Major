@@ -5,8 +5,17 @@ drop table ProjectManager;
 drop table Policy;
 drop table Project;
 drop table Employee;
+drop table Council;
 
 
+CREATE TABLE Council(
+	councilID int,
+	name VARCHAR(80),
+	budget float,
+	happiness float,
+	PRIMARY KEY(councilID)
+
+);
 
 CREATE TABLE Employee(
 	employeeID VARCHAR(80),
@@ -18,7 +27,7 @@ CREATE TABLE Employee(
 	username VARCHAR(80),
 	password VARCHAR(80),
 	privilege INT,
-	PRIMARY KEY (employeeID)
+	PRIMARY KEY (employeeID),
 );
 
 CREATE TABLE ProjectManager(
@@ -80,6 +89,10 @@ CREATE TABLE Task(
 	FOREIGN KEY (policyProjectID) REFERENCES PolicyProject
 );
 
+INSERT INTO Council VALUES (1, 'Wollongong', 100, 1000)
+INSERT INTO Council VALUES (2, 'Kiama', 100, 1000)
+INSERT INTO Council VALUES (3, 'ShellHarbour', 100, 1000)
+
 INSERT INTO Policy VALUES ('policy1', 'policyStatement', 1)
 INSERT INTO Policy VALUES ('policy2', 'policyStatement', 2)
 INSERT INTO Policy VALUES ('policy3', 'policyStatement', 3)
@@ -96,9 +109,9 @@ INSERT INTO Project VALUES (2, 'project2', 'objective2', 10000, 'stakeholder2', 
 INSERT INTO Project VALUES (3, 'project3', 'objective3', 10000, 'stakeholder3', 'department3')
 INSERT INTO Project VALUES (4, 'project4', 'objective4', 10000, 'stakeholder4', 'department4')
 
-INSERT INTO PolicyProject VALUES(1, GetDate(), GetDate(), GetDate(), 0, 20, 2, 4, 1, 1, 20)
-INSERT INTO PolicyProject VALUES(2, GetDate(), GetDate(), GetDate(), 0, 30, 2, 4, 1, 2, 20)
-INSERT INTO PolicyProject VALUES(3, GetDate(), GetDate(), GetDate(), 0, 40, 2, 4, 1, 3, 20)
-INSERT INTO PolicyProject VALUES(4, GetDate(), GetDate(), GetDate(), 0, 50, 2, 5, 2, 1, 20)
-INSERT INTO PolicyProject VALUES(5, GetDate(), GetDate(), GetDate(), 0, 60, 2, 5, 2, 2, 20)
-INSERT INTO PolicyProject VALUES(6, GetDate(), GetDate(), GetDate(), 0, 70, 2, 5, 2, 3, 20)
+INSERT INTO PolicyProject VALUES(1, GetDate(), GetDate(), GetDate(), 100, 20, 2, 4, 1, 1, 20)
+INSERT INTO PolicyProject VALUES(2, GetDate(), GetDate(), GetDate(), 100, 30, 2, 4, 1, 2, 20)
+INSERT INTO PolicyProject VALUES(3, GetDate(), GetDate(), GetDate(), 20, 40, 2, 4, 1, 3, 20)
+INSERT INTO PolicyProject VALUES(4, GetDate(), GetDate(), GetDate(), 10, 50, 2, 5, 2, 1, 20)
+INSERT INTO PolicyProject VALUES(5, GetDate(), GetDate(), GetDate(), 60, 60, 2, 5, 2, 2, 20)
+INSERT INTO PolicyProject VALUES(6, GetDate(), GetDate(), GetDate(), 80, 70, 2, 5, 2, 3, 20)

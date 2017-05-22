@@ -31,40 +31,53 @@
             this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.dataDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dataDataSet = new WindowsFormsApplication5.DataDataSet();
+            this.projectBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.projectDataSet = new WindowsFormsApplication5.ProjectDataSet();
             this.policyProjectBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.policyProjectBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.policyProject = new WindowsFormsApplication5.PolicyProject();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.mainPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.chart2 = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.projectBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.policyBox = new System.Windows.Forms.ComboBox();
             this.policyProjectBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
-            this.projectDataSet = new WindowsFormsApplication5.ProjectDataSet();
-            this.projectBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.policyProjectBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.policyProject = new WindowsFormsApplication5.PolicyProject();
             this.policyProjectTableAdapter = new WindowsFormsApplication5.PolicyProjectTableAdapters.PolicyProjectTableAdapter();
             this.policyProjectTableAdapter1 = new WindowsFormsApplication5.ProjectDataSetTableAdapters.PolicyProjectTableAdapter();
             this.projectTableAdapter = new WindowsFormsApplication5.ProjectDataSetTableAdapters.ProjectTableAdapter();
-            this.projectBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.policyProjectBindingSource3 = new System.Windows.Forms.BindingSource(this.components);
+            this.policyProjectTableAdapter2 = new WindowsFormsApplication5.DataDataSetTableAdapters.PolicyProjectTableAdapter();
+            this.policyProjectBindingSource4 = new System.Windows.Forms.BindingSource(this.components);
+            this.policyProjectBindingSource5 = new System.Windows.Forms.BindingSource(this.components);
+            this.dataDataSetBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.policyProjectBindingSource6 = new System.Windows.Forms.BindingSource(this.components);
             this.flowLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.policyProjectBindingSource1)).BeginInit();
-            this.mainPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.chart2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.policyProjectBindingSource2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataDataSetBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.projectBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.projectDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.projectBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.policyProjectBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.policyProjectBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.policyProject)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.projectBindingSource1)).BeginInit();
+            this.mainPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.chart2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.projectBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.policyProjectBindingSource2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.policyProjectBindingSource3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.policyProjectBindingSource4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.policyProjectBindingSource5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataDataSetBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.policyProjectBindingSource6)).BeginInit();
             this.SuspendLayout();
             // 
             // flowLayoutPanel1
@@ -115,28 +128,49 @@
             // 
             chartArea1.Name = "ChartArea1";
             this.chart1.ChartAreas.Add(chartArea1);
-            this.chart1.DataSource = this.projectBindingSource1;
             legend1.Name = "Legend1";
             legend1.Title = "Policy Name";
             this.chart1.Legends.Add(legend1);
             this.chart1.Location = new System.Drawing.Point(281, 13);
             this.chart1.Name = "chart1";
-            series1.ChartArea = "ChartArea1";
-            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
-            series1.IsValueShownAsLabel = true;
-            series1.Legend = "Legend1";
-            series1.Name = "Policy Budget";
-            series1.XValueMember = "name";
-            series1.YValueMembers = "budget";
-            this.chart1.Series.Add(series1);
             this.chart1.Size = new System.Drawing.Size(272, 282);
             this.chart1.TabIndex = 6;
             this.chart1.Text = "chart1";
+            // 
+            // dataDataSetBindingSource
+            // 
+            this.dataDataSetBindingSource.DataSource = this.dataDataSet;
+            this.dataDataSetBindingSource.Position = 0;
+            // 
+            // dataDataSet
+            // 
+            this.dataDataSet.DataSetName = "DataDataSet";
+            this.dataDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // projectBindingSource1
+            // 
+            this.projectBindingSource1.DataMember = "Project";
+            this.projectBindingSource1.DataSource = this.projectDataSet;
+            // 
+            // projectDataSet
+            // 
+            this.projectDataSet.DataSetName = "ProjectDataSet";
+            this.projectDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // policyProjectBindingSource1
             // 
             this.policyProjectBindingSource1.DataMember = "PolicyProject";
             this.policyProjectBindingSource1.DataSource = this.policyProjectBindingSource;
+            // 
+            // policyProjectBindingSource
+            // 
+            this.policyProjectBindingSource.DataSource = this.policyProject;
+            this.policyProjectBindingSource.Position = 0;
+            // 
+            // policyProject
+            // 
+            this.policyProject.DataSetName = "PolicyProject";
+            this.policyProject.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // mainPanel
             // 
@@ -155,20 +189,18 @@
             // 
             chartArea2.Name = "ChartArea1";
             this.chart2.ChartAreas.Add(chartArea2);
-            this.chart2.DataSource = this.projectBindingSource;
             legend2.Name = "Legend1";
             this.chart2.Legends.Add(legend2);
             this.chart2.Location = new System.Drawing.Point(3, 13);
             this.chart2.Name = "chart2";
-            series2.ChartArea = "ChartArea1";
-            series2.Legend = "Legend1";
-            series2.Name = "Series1";
-            series2.XValueMember = "projectID";
-            series2.YValueMembers = "budget";
-            this.chart2.Series.Add(series2);
             this.chart2.Size = new System.Drawing.Size(272, 282);
             this.chart2.TabIndex = 7;
             this.chart2.Text = "chart2";
+            // 
+            // projectBindingSource
+            // 
+            this.projectBindingSource.DataMember = "Project";
+            this.projectBindingSource.DataSource = this.projectDataSet;
             // 
             // policyBox
             // 
@@ -183,26 +215,6 @@
             this.policyProjectBindingSource2.DataMember = "PolicyProject";
             this.policyProjectBindingSource2.DataSource = this.projectDataSet;
             // 
-            // projectDataSet
-            // 
-            this.projectDataSet.DataSetName = "ProjectDataSet";
-            this.projectDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // projectBindingSource
-            // 
-            this.projectBindingSource.DataMember = "Project";
-            this.projectBindingSource.DataSource = this.projectDataSet;
-            // 
-            // policyProjectBindingSource
-            // 
-            this.policyProjectBindingSource.DataSource = this.policyProject;
-            this.policyProjectBindingSource.Position = 0;
-            // 
-            // policyProject
-            // 
-            this.policyProject.DataSetName = "PolicyProject";
-            this.policyProject.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
             // policyProjectTableAdapter
             // 
             this.policyProjectTableAdapter.ClearBeforeFill = true;
@@ -215,10 +227,34 @@
             // 
             this.projectTableAdapter.ClearBeforeFill = true;
             // 
-            // projectBindingSource1
+            // policyProjectBindingSource3
             // 
-            this.projectBindingSource1.DataMember = "Project";
-            this.projectBindingSource1.DataSource = this.projectDataSet;
+            this.policyProjectBindingSource3.DataMember = "PolicyProject";
+            this.policyProjectBindingSource3.DataSource = this.dataDataSet;
+            // 
+            // policyProjectTableAdapter2
+            // 
+            this.policyProjectTableAdapter2.ClearBeforeFill = true;
+            // 
+            // policyProjectBindingSource4
+            // 
+            this.policyProjectBindingSource4.DataMember = "PolicyProject";
+            this.policyProjectBindingSource4.DataSource = this.dataDataSet;
+            // 
+            // policyProjectBindingSource5
+            // 
+            this.policyProjectBindingSource5.DataMember = "PolicyProject";
+            this.policyProjectBindingSource5.DataSource = this.dataDataSet;
+            // 
+            // dataDataSetBindingSource1
+            // 
+            this.dataDataSetBindingSource1.DataSource = this.dataDataSet;
+            this.dataDataSetBindingSource1.Position = 0;
+            // 
+            // policyProjectBindingSource6
+            // 
+            this.policyProjectBindingSource6.DataMember = "PolicyProject";
+            this.policyProjectBindingSource6.DataSource = this.dataDataSetBindingSource1;
             // 
             // CeoDash
             // 
@@ -236,15 +272,22 @@
             this.Controls.SetChildIndex(this.policyBox, 0);
             this.flowLayoutPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.policyProjectBindingSource1)).EndInit();
-            this.mainPanel.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.chart2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.policyProjectBindingSource2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataDataSetBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.projectBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.projectDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.projectBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.policyProjectBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.policyProjectBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.policyProject)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.projectBindingSource1)).EndInit();
+            this.mainPanel.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.chart2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.projectBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.policyProjectBindingSource2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.policyProjectBindingSource3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.policyProjectBindingSource4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.policyProjectBindingSource5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataDataSetBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.policyProjectBindingSource6)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -271,5 +314,13 @@
         private ProjectDataSetTableAdapters.ProjectTableAdapter projectTableAdapter;
         private System.Windows.Forms.ComboBox policyBox;
         private System.Windows.Forms.BindingSource projectBindingSource1;
+        private System.Windows.Forms.BindingSource dataDataSetBindingSource;
+        private DataDataSet dataDataSet;
+        private System.Windows.Forms.BindingSource policyProjectBindingSource3;
+        private DataDataSetTableAdapters.PolicyProjectTableAdapter policyProjectTableAdapter2;
+        private System.Windows.Forms.BindingSource policyProjectBindingSource4;
+        private System.Windows.Forms.BindingSource policyProjectBindingSource5;
+        private System.Windows.Forms.BindingSource policyProjectBindingSource6;
+        private System.Windows.Forms.BindingSource dataDataSetBindingSource1;
     }
 }
