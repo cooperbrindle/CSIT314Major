@@ -32,8 +32,10 @@ namespace WindowsFormsApplication5
 
         private void main2_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'nEWdataDataSet.Task' table. You can move, or remove it, as needed.
+            
             // TODO: This line of code loads data into the 'projectDataSet.PolicyProject' table. You can move, or remove it, as needed.
-            //this.policyProjectTableAdapter.Fill(this.projectDataSet.PolicyProject);
+            this.policyProjectTableAdapter.Fill(this.projectDataSet.PolicyProject);
             // TODO: This line of code loads data into the 'projectDataSet.Project' table. You can move, or remove it, as needed.
             //this.projectTableAdapter.Fill(this.projectDataSet.Project);
 

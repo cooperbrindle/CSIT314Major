@@ -29,12 +29,13 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
@@ -43,19 +44,26 @@
             this.button5 = new System.Windows.Forms.Button();
             this.mainPanel = new System.Windows.Forms.Panel();
             this.chart2 = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.processBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.projectDataSet = new WindowsFormsApplication5.ProjectDataSet();
             this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.processBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.projectDataSet = new WindowsFormsApplication5.ProjectDataSet();
             this.processTableAdapter = new WindowsFormsApplication5.ProjectDataSetTableAdapters.ProcessTableAdapter();
             this.projectBox = new System.Windows.Forms.ComboBox();
-            this.processBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.nEWdataDataSet = new WindowsFormsApplication5.NEWdataDataSet();
+            this.taskBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.taskTableAdapter = new WindowsFormsApplication5.NEWdataDataSetTableAdapters.TaskTableAdapter();
+            this.taskBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.flowLayoutPanel1.SuspendLayout();
             this.mainPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chart2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.processBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.projectDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.processBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.projectDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.processBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nEWdataDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.taskBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.taskBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // flowLayoutPanel1
@@ -134,42 +142,58 @@
             // 
             // chart2
             // 
-            chartArea3.Name = "ChartArea1";
-            this.chart2.ChartAreas.Add(chartArea3);
-            this.chart2.DataSource = this.processBindingSource1;
-            legend3.Name = "Legend1";
-            this.chart2.Legends.Add(legend3);
+            chartArea1.Name = "ChartArea1";
+            this.chart2.ChartAreas.Add(chartArea1);
+            this.chart2.DataSource = this.taskBindingSource1;
+            legend1.Name = "Legend1";
+            this.chart2.Legends.Add(legend1);
             this.chart2.Location = new System.Drawing.Point(1, 13);
             this.chart2.Name = "chart2";
-            series3.ChartArea = "ChartArea1";
-            series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.StackedColumn100;
-            series3.Legend = "Legend1";
-            series3.Name = "Series1";
-            series3.XValueMember = "processID";
-            series3.YValueMembers = "cost";
-            this.chart2.Series.Add(series3);
+            series1.ChartArea = "ChartArea1";
+            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.StackedColumn100;
+            series1.Legend = "Legend1";
+            series1.Name = "task1";
+            series1.XValueMember = "policyProjectID";
+            series1.YValueMembers = "processID";
+            series2.ChartArea = "ChartArea1";
+            series2.Legend = "Legend1";
+            series2.Name = "Series2";
+            series2.XValueMember = "processID";
+            series2.YValueMembers = "weight";
+            this.chart2.Series.Add(series1);
+            this.chart2.Series.Add(series2);
             this.chart2.Size = new System.Drawing.Size(272, 282);
             this.chart2.TabIndex = 8;
             this.chart2.Text = "chart2";
             // 
+            // processBindingSource1
+            // 
+            this.processBindingSource1.DataMember = "Process";
+            this.processBindingSource1.DataSource = this.projectDataSet;
+            // 
+            // projectDataSet
+            // 
+            this.projectDataSet.DataSetName = "ProjectDataSet";
+            this.projectDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // chart1
             // 
-            chartArea4.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea4);
-            this.chart1.DataSource = this.processBindingSource;
-            legend4.Name = "Legend1";
-            legend4.Title = "Task Name";
-            this.chart1.Legends.Add(legend4);
+            chartArea2.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea2);
+            this.chart1.DataSource = this.taskBindingSource;
+            legend2.Name = "Legend1";
+            legend2.Title = "Task Name";
+            this.chart1.Legends.Add(legend2);
             this.chart1.Location = new System.Drawing.Point(279, 13);
             this.chart1.Name = "chart1";
-            series4.ChartArea = "ChartArea1";
-            series4.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
-            series4.IsValueShownAsLabel = true;
-            series4.Legend = "Legend1";
-            series4.Name = "Policy Budget";
-            series4.XValueMember = "processID";
-            series4.YValueMembers = "cost";
-            this.chart1.Series.Add(series4);
+            series3.ChartArea = "ChartArea1";
+            series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
+            series3.IsValueShownAsLabel = true;
+            series3.Legend = "Legend1";
+            series3.Name = "Policy Budget";
+            series3.XValueMember = "processID";
+            series3.YValueMembers = "cost";
+            this.chart1.Series.Add(series3);
             this.chart1.Size = new System.Drawing.Size(272, 282);
             this.chart1.TabIndex = 7;
             this.chart1.Text = "chart1";
@@ -178,11 +202,6 @@
             // 
             this.processBindingSource.DataMember = "Process";
             this.processBindingSource.DataSource = this.projectDataSet;
-            // 
-            // projectDataSet
-            // 
-            this.projectDataSet.DataSetName = "ProjectDataSet";
-            this.projectDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // processTableAdapter
             // 
@@ -197,10 +216,24 @@
             this.projectBox.Size = new System.Drawing.Size(166, 21);
             this.projectBox.TabIndex = 8;
             // 
-            // processBindingSource1
+            // nEWdataDataSet
             // 
-            this.processBindingSource1.DataMember = "Process";
-            this.processBindingSource1.DataSource = this.projectDataSet;
+            this.nEWdataDataSet.DataSetName = "NEWdataDataSet";
+            this.nEWdataDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // taskBindingSource
+            // 
+            this.taskBindingSource.DataMember = "Task";
+            this.taskBindingSource.DataSource = this.nEWdataDataSet;
+            // 
+            // taskTableAdapter
+            // 
+            this.taskTableAdapter.ClearBeforeFill = true;
+            // 
+            // taskBindingSource1
+            // 
+            this.taskBindingSource1.DataMember = "Task";
+            this.taskBindingSource1.DataSource = this.nEWdataDataSet;
             // 
             // pManager
             // 
@@ -219,10 +252,13 @@
             this.flowLayoutPanel1.ResumeLayout(false);
             this.mainPanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.chart2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.processBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.projectDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.processBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.projectDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.processBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nEWdataDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.taskBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.taskBindingSource1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -244,5 +280,9 @@
         private System.Windows.Forms.DataVisualization.Charting.Chart chart2;
         private System.Windows.Forms.ComboBox projectBox;
         private System.Windows.Forms.BindingSource processBindingSource1;
+        private NEWdataDataSet nEWdataDataSet;
+        private System.Windows.Forms.BindingSource taskBindingSource;
+        private NEWdataDataSetTableAdapters.TaskTableAdapter taskTableAdapter;
+        private System.Windows.Forms.BindingSource taskBindingSource1;
     }
 }
