@@ -13,7 +13,6 @@ namespace WindowsFormsApplication5.Controls
     public partial class ProjectProgress : UserControl
     {
         int policyID;
-        LinkedList<PolicyProject> pList;
 
         public ProjectProgress()
         {
@@ -23,7 +22,6 @@ namespace WindowsFormsApplication5.Controls
         public ProjectProgress(int id) : this()
         {
             policyID = id;
-            int i = 0;
             Database db = new Database();
             DataTable t = db.query("SELECT * FROM PolicyProject WHERE policyID = " + policyID);
             foreach(DataRow r in t.Rows)

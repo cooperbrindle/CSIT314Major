@@ -44,26 +44,26 @@
             this.button5 = new System.Windows.Forms.Button();
             this.mainPanel = new System.Windows.Forms.Panel();
             this.chart2 = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.taskBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.nEWdataDataSet = new WindowsFormsApplication5.NEWdataDataSet();
+            this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.taskBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.processBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.projectDataSet = new WindowsFormsApplication5.ProjectDataSet();
-            this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.processBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.processTableAdapter = new WindowsFormsApplication5.ProjectDataSetTableAdapters.ProcessTableAdapter();
             this.projectBox = new System.Windows.Forms.ComboBox();
-            this.nEWdataDataSet = new WindowsFormsApplication5.NEWdataDataSet();
-            this.taskBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.taskTableAdapter = new WindowsFormsApplication5.NEWdataDataSetTableAdapters.TaskTableAdapter();
-            this.taskBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.flowLayoutPanel1.SuspendLayout();
             this.mainPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chart2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.taskBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nEWdataDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.taskBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.processBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.projectDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.processBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nEWdataDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.taskBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.taskBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // flowLayoutPanel1
@@ -100,6 +100,7 @@
             this.button2.TabIndex = 9;
             this.button2.Text = "Make Request";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button3
             // 
@@ -166,15 +167,15 @@
             this.chart2.TabIndex = 8;
             this.chart2.Text = "chart2";
             // 
-            // processBindingSource1
+            // taskBindingSource1
             // 
-            this.processBindingSource1.DataMember = "Process";
-            this.processBindingSource1.DataSource = this.projectDataSet;
+            this.taskBindingSource1.DataMember = "Task";
+            this.taskBindingSource1.DataSource = this.nEWdataDataSet;
             // 
-            // projectDataSet
+            // nEWdataDataSet
             // 
-            this.projectDataSet.DataSetName = "ProjectDataSet";
-            this.projectDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.nEWdataDataSet.DataSetName = "NEWdataDataSet";
+            this.nEWdataDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // chart1
             // 
@@ -198,6 +199,21 @@
             this.chart1.TabIndex = 7;
             this.chart1.Text = "chart1";
             // 
+            // taskBindingSource
+            // 
+            this.taskBindingSource.DataMember = "Task";
+            this.taskBindingSource.DataSource = this.nEWdataDataSet;
+            // 
+            // processBindingSource1
+            // 
+            this.processBindingSource1.DataMember = "Process";
+            this.processBindingSource1.DataSource = this.projectDataSet;
+            // 
+            // projectDataSet
+            // 
+            this.projectDataSet.DataSetName = "ProjectDataSet";
+            this.projectDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // processBindingSource
             // 
             this.processBindingSource.DataMember = "Process";
@@ -216,24 +232,9 @@
             this.projectBox.Size = new System.Drawing.Size(166, 21);
             this.projectBox.TabIndex = 8;
             // 
-            // nEWdataDataSet
-            // 
-            this.nEWdataDataSet.DataSetName = "NEWdataDataSet";
-            this.nEWdataDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // taskBindingSource
-            // 
-            this.taskBindingSource.DataMember = "Task";
-            this.taskBindingSource.DataSource = this.nEWdataDataSet;
-            // 
             // taskTableAdapter
             // 
             this.taskTableAdapter.ClearBeforeFill = true;
-            // 
-            // taskBindingSource1
-            // 
-            this.taskBindingSource1.DataMember = "Task";
-            this.taskBindingSource1.DataSource = this.nEWdataDataSet;
             // 
             // pManager
             // 
@@ -252,13 +253,13 @@
             this.flowLayoutPanel1.ResumeLayout(false);
             this.mainPanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.chart2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.taskBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nEWdataDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.taskBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.processBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.projectDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.processBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nEWdataDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.taskBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.taskBindingSource1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
