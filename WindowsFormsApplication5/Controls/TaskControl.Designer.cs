@@ -149,7 +149,7 @@
             // cstLbl
             // 
             this.cstLbl.AutoSize = true;
-            this.cstLbl.BackColor = System.Drawing.SystemColors.Control;
+            this.cstLbl.BackColor = System.Drawing.SystemColors.ControlDark;
             this.cstLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
             this.cstLbl.Location = new System.Drawing.Point(9, 10);
             this.cstLbl.Name = "cstLbl";
@@ -178,7 +178,7 @@
             // timeLbl
             // 
             this.timeLbl.AutoSize = true;
-            this.timeLbl.BackColor = System.Drawing.SystemColors.Control;
+            this.timeLbl.BackColor = System.Drawing.SystemColors.ControlDark;
             this.timeLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
             this.timeLbl.Location = new System.Drawing.Point(9, 10);
             this.timeLbl.Name = "timeLbl";
@@ -217,7 +217,7 @@
             // wtLbl
             // 
             this.wtLbl.AutoSize = true;
-            this.wtLbl.BackColor = System.Drawing.SystemColors.Control;
+            this.wtLbl.BackColor = System.Drawing.SystemColors.ControlDark;
             this.wtLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
             this.wtLbl.Location = new System.Drawing.Point(9, 10);
             this.wtLbl.Name = "wtLbl";
@@ -246,7 +246,7 @@
             // wrkrLbl
             // 
             this.wrkrLbl.AutoSize = true;
-            this.wrkrLbl.BackColor = System.Drawing.SystemColors.Control;
+            this.wrkrLbl.BackColor = System.Drawing.SystemColors.ControlDark;
             this.wrkrLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
             this.wrkrLbl.Location = new System.Drawing.Point(9, 10);
             this.wrkrLbl.Name = "wrkrLbl";
@@ -275,7 +275,7 @@
             // ecoLbl
             // 
             this.ecoLbl.AutoSize = true;
-            this.ecoLbl.BackColor = System.Drawing.SystemColors.Control;
+            this.ecoLbl.BackColor = System.Drawing.SystemColors.ControlDark;
             this.ecoLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
             this.ecoLbl.Location = new System.Drawing.Point(9, 10);
             this.ecoLbl.Name = "ecoLbl";
@@ -304,7 +304,7 @@
             // happyLbl
             // 
             this.happyLbl.AutoSize = true;
-            this.happyLbl.BackColor = System.Drawing.SystemColors.Control;
+            this.happyLbl.BackColor = System.Drawing.SystemColors.ControlDark;
             this.happyLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
             this.happyLbl.Location = new System.Drawing.Point(9, 10);
             this.happyLbl.Name = "happyLbl";
@@ -336,6 +336,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ControlDark;
             this.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.Controls.Add(this.backBtn);
             this.Controls.Add(this.createBtn);

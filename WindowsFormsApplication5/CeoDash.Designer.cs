@@ -94,10 +94,13 @@
             // 
             // button2
             // 
+            this.button2.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(53)))), ((int)(((byte)(65)))));
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.ForeColor = System.Drawing.Color.White;
             this.button2.Location = new System.Drawing.Point(6, 50);
             this.button2.Margin = new System.Windows.Forms.Padding(0, 25, 6, 25);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(186, 42);
+            this.button2.Size = new System.Drawing.Size(186, 75);
             this.button2.TabIndex = 0;
             this.button2.Text = "Define Policy";
             this.button2.UseVisualStyleBackColor = true;
@@ -105,10 +108,13 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(6, 142);
+            this.button3.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(53)))), ((int)(((byte)(65)))));
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.ForeColor = System.Drawing.Color.White;
+            this.button3.Location = new System.Drawing.Point(6, 175);
             this.button3.Margin = new System.Windows.Forms.Padding(0, 25, 6, 25);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(186, 42);
+            this.button3.Size = new System.Drawing.Size(186, 58);
             this.button3.TabIndex = 1;
             this.button3.Text = "View Project Progress";
             this.button3.UseVisualStyleBackColor = true;
@@ -116,10 +122,13 @@
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(6, 234);
+            this.button4.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(53)))), ((int)(((byte)(65)))));
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button4.ForeColor = System.Drawing.Color.White;
+            this.button4.Location = new System.Drawing.Point(6, 283);
             this.button4.Margin = new System.Windows.Forms.Padding(0, 25, 6, 25);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(186, 42);
+            this.button4.Size = new System.Drawing.Size(186, 58);
             this.button4.TabIndex = 2;
             this.button4.Text = "View Project Report";
             this.button4.UseVisualStyleBackColor = true;
