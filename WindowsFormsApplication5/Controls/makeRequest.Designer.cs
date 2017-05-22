@@ -56,14 +56,24 @@
             // 
             // amountBox
             // 
+            this.amountBox.Increment = new decimal(new int[] {
+            100,
+            0,
+            0,
+            0});
             this.amountBox.Location = new System.Drawing.Point(152, 91);
+            this.amountBox.Maximum = new decimal(new int[] {
+            999999,
+            0,
+            0,
+            0});
             this.amountBox.Name = "amountBox";
             this.amountBox.Size = new System.Drawing.Size(120, 20);
             this.amountBox.TabIndex = 3;
             // 
             // backBtn
             // 
-            this.backBtn.Location = new System.Drawing.Point(509, 62);
+            this.backBtn.Location = new System.Drawing.Point(432, 63);
             this.backBtn.Name = "backBtn";
             this.backBtn.Size = new System.Drawing.Size(75, 23);
             this.backBtn.TabIndex = 4;
