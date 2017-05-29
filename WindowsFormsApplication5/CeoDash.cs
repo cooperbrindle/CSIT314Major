@@ -54,9 +54,9 @@ namespace WindowsFormsApplication5
         private void CEO_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'dataDataSet.PolicyProject' table. You can move, or remove it, as needed.
-            this.policyProjectTableAdapter2.Fill(this.dataDataSet.PolicyProject);
+            //this.policyProjectTableAdapter2.Fill(this.dataDataSet.PolicyProject);
             // TODO: This line of code loads data into the 'projectDataSet.Project' table. You can move, or remove it, as needed.
-            this.projectTableAdapter.Fill(this.projectDataSet.Project);
+            //this.projectTableAdapter.Fill(this.projectDataSet.Project);
             // TODO: This line of code loads data into the 'projectDataSet.PolicyProject' table. You can move, or remove it, as needed.
           //  this.policyProjectTableAdapter1.Fill(this.projectDataSet.PolicyProject);
             // TODO: This line of code loads data into the 'policyProject._PolicyProject' table. You can move, or remove it, as needed.
@@ -90,6 +90,11 @@ namespace WindowsFormsApplication5
             {
 
             }
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

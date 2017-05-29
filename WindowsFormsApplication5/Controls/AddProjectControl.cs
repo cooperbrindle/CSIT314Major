@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApplication5
 {
-    public partial class AddProjectControl : UserControl
+    public partial class AddProjectControl : Controls.baseControl
     {
         Database db;
         DataTable table;
@@ -113,11 +113,6 @@ namespace WindowsFormsApplication5
             qry += "'" + datePickEnd.Value.ToShortDateString() + "', null, 0, 0, null, ";
             qry += "'" + pman.employeeID + "', " + policy.policyID + ", " + proj.projectID + ", 0)";
             db.query(qry);
-            this.Dispose();
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
             this.Dispose();
         }
     }

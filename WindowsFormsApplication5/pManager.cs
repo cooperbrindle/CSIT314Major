@@ -67,9 +67,9 @@ namespace WindowsFormsApplication5
         private void pManager_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'nEWdataDataSet.Task' table. You can move, or remove it, as needed.
-            this.taskTableAdapter.Fill(this.nEWdataDataSet.Task);
+            //this.taskTableAdapter.Fill(this.nEWdataDataSet.Task);
             // TODO: This line of code loads data into the 'projectDataSet.Process' table. You can move, or remove it, as needed.
-            this.processTableAdapter.Fill(this.projectDataSet.Process);
+            //this.processTableAdapter.Fill(this.projectDataSet.Process);
 
         }
 

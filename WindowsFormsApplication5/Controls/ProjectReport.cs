@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApplication5.Controls
 {
-    public partial class ProjectReport : UserControl
+    public partial class ProjectReport : baseControl
     {
         public PolicyProjectModel proj;
         public int policyID;
@@ -62,9 +62,6 @@ namespace WindowsFormsApplication5.Controls
             polName.Text = t.Rows[0][0].ToString();
         }
 
-        private void backBtn_Click(object sender, EventArgs e)
-        {
-            this.Dispose();
-        }
+
     }
 }

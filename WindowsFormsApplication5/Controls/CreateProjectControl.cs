@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApplication5
 {
-    public partial class CreateProjectControl : UserControl
+    public partial class CreateProjectControl : Controls.baseControl
     {
         public CreateProjectControl()
         {
@@ -39,9 +39,9 @@ namespace WindowsFormsApplication5
                 
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void CreateProjectControl_Load(object sender, EventArgs e)
         {
-            this.Dispose();
+
         }
     }
 }

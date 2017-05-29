@@ -8,11 +8,12 @@
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>WindowsFormsApplication5</RootNamespace>
-    <AssemblyName>WindowsFormsApplication5</AssemblyName>
+    <AssemblyName>Council Dashboard</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
-    <PublishUrl>publish\</PublishUrl>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>C:\Users\Cooper\Desktop\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
     <UpdateEnabled>false</UpdateEnabled>
@@ -22,10 +23,10 @@
     <UpdatePeriodically>false</UpdatePeriodically>
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
-    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationRevision>1</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
-    <IsWebBootstrapper>false</IsWebBootstrapper>
     <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
     <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -46,6 +47,21 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>1F7A39C1CA2644E33CD11EDA5B158305ED61FCC2</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>WCCproject_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>c_gold.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -79,6 +95,12 @@
     </Compile>
     <Compile Include="CeoDash.Designer.cs">
       <DependentUpon>CeoDash.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\baseControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\baseControl.Designer.cs">
+      <DependentUpon>baseControl.cs</DependentUpon>
     </Compile>
     <Compile Include="Controls\CreateProjectControl.cs">
       <SubType>UserControl</SubType>
@@ -173,6 +195,9 @@
     <EmbeddedResource Include="CeoDash.resx">
       <DependentUpon>CeoDash.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Controls\baseControl.resx">
+      <DependentUpon>baseControl.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Controls\CreateProjectControl.resx">
       <DependentUpon>CreateProjectControl.cs</DependentUpon>
     </EmbeddedResource>
@@ -263,6 +288,7 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="WCCproject_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -271,6 +297,7 @@
     <None Include="Resources\Wollongong-Sunrise-4.jpg" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="c_gold.ico" />
     <Content Include="Data.mdf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApplication5.Controls
 {
-    public partial class TaskControl : UserControl
+    public partial class TaskControl : baseControl
     {
         public String policyProjectID {get;set;}
 
@@ -28,7 +28,7 @@ namespace WindowsFormsApplication5.Controls
             DataTable t = db.query("SELECT weight FROM Task WHERE policyProjectID = '" + policyProjectID + "'");
             foreach(DataRow r in t.Rows)
             {
-                total += Convert.ToInt32(r[0].ToString());
+                //total += Convert.ToInt32(r[0].ToString());
 
             }
             trackBar1.Minimum = 1;

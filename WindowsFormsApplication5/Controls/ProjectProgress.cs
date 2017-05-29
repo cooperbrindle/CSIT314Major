@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApplication5.Controls
 {
-    public partial class ProjectProgress : UserControl
+    public partial class ProjectProgress : baseControl
     {
         int policyID;
 

@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApplication5
 {
-    public partial class PolicyControl : UserControl
+    public partial class PolicyControl : Controls.baseControl
     {
         public PolicyControl()
         {

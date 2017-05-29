@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApplication5.Controls
 {
-    public partial class makeRequest : UserControl
+    public partial class makeRequest : baseControl
     {
 
         public PolicyProjectModel proj;
@@ -33,11 +33,6 @@ namespace WindowsFormsApplication5.Controls
                 db.query("UPDATE PolicyProject SET finalCost = finalCost + (SELECT budget FROM Project WHERE projectID = " + proj.projectID + ") + " + amountBox.Value + " WHERE policyProjectID = "+ proj.policyProjectID);
                 this.Dispose();
             }
-        }
-
-        private void backBtn_Click(object sender, EventArgs e)
-        {
-            this.Dispose();
         }
     }
 }

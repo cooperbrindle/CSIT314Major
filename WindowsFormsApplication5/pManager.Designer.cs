@@ -41,9 +41,9 @@
             this.button5 = new System.Windows.Forms.Button();
             this.mainPanel = new System.Windows.Forms.Panel();
             this.chart2 = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.taskBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.nEWdataDataSet = new WindowsFormsApplication5.NEWdataDataSet();
-            this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.taskBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.processBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.projectDataSet = new WindowsFormsApplication5.ProjectDataSet();
@@ -54,9 +54,9 @@
             this.flowLayoutPanel1.SuspendLayout();
             this.mainPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chart2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.taskBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nEWdataDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.taskBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.processBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.projectDataSet)).BeginInit();
@@ -169,16 +169,6 @@
             this.chart2.TabIndex = 8;
             this.chart2.Text = "chart2";
             // 
-            // taskBindingSource1
-            // 
-            this.taskBindingSource1.DataMember = "Task";
-            this.taskBindingSource1.DataSource = this.nEWdataDataSet;
-            // 
-            // nEWdataDataSet
-            // 
-            this.nEWdataDataSet.DataSetName = "NEWdataDataSet";
-            this.nEWdataDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
             // chart1
             // 
             chartArea2.Name = "ChartArea1";
@@ -191,6 +181,16 @@
             this.chart1.Size = new System.Drawing.Size(272, 282);
             this.chart1.TabIndex = 7;
             this.chart1.Text = "chart1";
+            // 
+            // taskBindingSource1
+            // 
+            this.taskBindingSource1.DataMember = "Task";
+            this.taskBindingSource1.DataSource = this.nEWdataDataSet;
+            // 
+            // nEWdataDataSet
+            // 
+            this.nEWdataDataSet.DataSetName = "NEWdataDataSet";
+            this.nEWdataDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // taskBindingSource
             // 
@@ -246,9 +246,9 @@
             this.flowLayoutPanel1.ResumeLayout(false);
             this.mainPanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.chart2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.taskBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nEWdataDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.taskBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.processBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.projectDataSet)).EndInit();

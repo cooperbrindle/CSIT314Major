@@ -31,7 +31,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.amountBox = new System.Windows.Forms.NumericUpDown();
-            this.backBtn = new System.Windows.Forms.Button();
             this.submitBtn = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -77,16 +76,6 @@
             this.amountBox.Size = new System.Drawing.Size(120, 20);
             this.amountBox.TabIndex = 3;
             // 
-            // backBtn
-            // 
-            this.backBtn.Location = new System.Drawing.Point(467, 6);
-            this.backBtn.Name = "backBtn";
-            this.backBtn.Size = new System.Drawing.Size(75, 23);
-            this.backBtn.TabIndex = 4;
-            this.backBtn.Text = "Back";
-            this.backBtn.UseVisualStyleBackColor = true;
-            this.backBtn.Click += new System.EventHandler(this.backBtn_Click);
-            // 
             // submitBtn
             // 
             this.submitBtn.Location = new System.Drawing.Point(139, 140);
@@ -124,7 +113,6 @@
             this.BackColor = System.Drawing.SystemColors.ControlDark;
             this.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.Controls.Add(this.panel2);
-            this.Controls.Add(this.backBtn);
             this.Controls.Add(this.label2);
             this.Name = "makeRequest";
             this.Size = new System.Drawing.Size(556, 310);
@@ -142,7 +130,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.NumericUpDown amountBox;
-        private System.Windows.Forms.Button backBtn;
         private System.Windows.Forms.Button submitBtn;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;

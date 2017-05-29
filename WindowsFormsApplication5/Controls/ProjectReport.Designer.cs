@@ -51,7 +51,6 @@
             this.label5 = new System.Windows.Forms.Label();
             this.weightBox = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
-            this.backBtn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -259,22 +258,11 @@
             this.label10.TabIndex = 23;
             this.label10.Text = "Weight";
             // 
-            // backBtn
-            // 
-            this.backBtn.Location = new System.Drawing.Point(446, 6);
-            this.backBtn.Name = "backBtn";
-            this.backBtn.Size = new System.Drawing.Size(75, 23);
-            this.backBtn.TabIndex = 25;
-            this.backBtn.Text = "Back";
-            this.backBtn.UseVisualStyleBackColor = true;
-            this.backBtn.Click += new System.EventHandler(this.backBtn_Click);
-            // 
             // ProjectReport
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.Controls.Add(this.backBtn);
             this.Controls.Add(this.weightBox);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label5);
@@ -300,6 +288,29 @@
             this.Controls.Add(this.label1);
             this.Name = "ProjectReport";
             this.Size = new System.Drawing.Size(558, 312);
+            this.Controls.SetChildIndex(this.label1, 0);
+            this.Controls.SetChildIndex(this.polName, 0);
+            this.Controls.SetChildIndex(this.projName, 0);
+            this.Controls.SetChildIndex(this.label2, 0);
+            this.Controls.SetChildIndex(this.descBox, 0);
+            this.Controls.SetChildIndex(this.label3, 0);
+            this.Controls.SetChildIndex(this.label4, 0);
+            this.Controls.SetChildIndex(this.pManBox, 0);
+            this.Controls.SetChildIndex(this.budgetBox, 0);
+            this.Controls.SetChildIndex(this.CostLbl, 0);
+            this.Controls.SetChildIndex(this.costBox, 0);
+            this.Controls.SetChildIndex(this.label7, 0);
+            this.Controls.SetChildIndex(this.complDateBox, 0);
+            this.Controls.SetChildIndex(this.ProjectComboBox, 0);
+            this.Controls.SetChildIndex(this.label6, 0);
+            this.Controls.SetChildIndex(this.label8, 0);
+            this.Controls.SetChildIndex(this.startDateBox, 0);
+            this.Controls.SetChildIndex(this.label9, 0);
+            this.Controls.SetChildIndex(this.estDateBox, 0);
+            this.Controls.SetChildIndex(this.progressBar1, 0);
+            this.Controls.SetChildIndex(this.label5, 0);
+            this.Controls.SetChildIndex(this.label10, 0);
+            this.Controls.SetChildIndex(this.weightBox, 0);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -330,6 +341,5 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox weightBox;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Button backBtn;
     }
 }
